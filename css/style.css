@@ -1,0 +1,30 @@
+body{
+    background-color: #FFFEF9;
+    font-family: "Poppins";
+}
+
+a{
+    font-family: "Poppins";
+}
+
+p{
+    font-family: "Poppins";
+}
+
+
+
+h3{
+    font-weight: 600;
+
+}
+
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
