@@ -23,7 +23,6 @@ h3{
 }
 
 
-
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -32,3 +31,4 @@ h3{
   -ms-overflow-style: none; 
   scrollbar-width: none;  
 }
+

@@ -12,9 +12,9 @@
 </head>
 <body>
     <!-- NAV BAR -->
-    <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[52px] md:h-[96px] border-b border-[#36363633]">
+    <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[52px] md:h-[96px] md:border-b border-[#36363633]">
         <div class="container mx-auto">
-            <div class="grid grid-cols-[20%,60%,20%] items-center">
+            <div class="flex justify-between items-center px-6 md:px-0">
                 <img src="images/Office Khaja Logo Red.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
                 
                 <!-- Desktop Links -->
@@ -28,87 +28,122 @@
                     </ul>
                 </div>
 
-                <div id="custom-meal-profile" class="flex items-center justify-end">
+                <div id="custom-meal-profile" class="hidden md:flex flex items-center justify-end">
                     <img src="images/custom-mean-profile.png" alt="" class="w-[64px] h-[64px] object-cover">
                 </div>
+
+                <div class="md:hidden">
+                    <button id="hamburger" class="space-y-[5px] md:hidden" type="button">
+                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
+                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
+                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
+                    </button>
+                </div>
+
             </div>        
         </div>
     </nav>
 
-    <section class="py-12">
+    <section class="py-4 md:py-12 px-6 md:px-0">
         <div class="container mx-auto">
-            <div class=" grid grid-cols-[60%,40%] ">
+            <div class=" grid md:grid-cols-[60%,40%] ">
             <div class="">
                 <div class="relative">
-                    <h1 class="text-4xl font-semibold">Create custom meal</h1>
+                    <h1 class="text-xl md:text-4xl font-semibold">Create custom meal</h1>
 
-                    <ul id="steps" class="py-2 pt-12 flex md:flex-row text-[#8A8A8A] text-sm font-medium border-b border-[#36363633]">
+                    <ul id="steps" class="hidden md:flex py-2 pt-12 flex md:flex-row text-[#8A8A8A] text-sm font-medium border-b border-[#36363633]">
                         <li><a href="#" class="step-link px-10 py-2 text-[#363636] cursor-pointer" data-step="1">1. Meal</a></li>
                         <li><a href="#" class="step-link px-10 py-2" data-step="2">2. Meal Items</a></li>
                         <li><a href="#" class="step-link px-10 py-2" data-step="3">3. Preference</a></li>
                         <li><a href="#" class="step-link px-10 py-2" data-step="4">4. Time</a></li>
                         <li><a href="#" class="step-link px-10 py-2" data-step="5">5. Checkout</a></li>
                     </ul>
+
+                    <!-- MOBILE VERSION -->
+                    <ul id="mobile-steps" class="md:hidden flex justify-between justify-center gap-4 pt-4 text-[#8A8A8A] text-sm font-medium">
+                        <li><button class="mobile-step-link px-3 py-2 " data-step="1" data-label="Meal">1</button></li>
+                        <li><button class="mobile-step-link px-3 py-2 "data-step="2" data-label="Meal Items">2</button></li>
+                        <li><button class="mobile-step-link px-3 py-2 " data-step="3" data-label="Preference">3</button></li>
+                        <li><button class="mobile-step-link px-3 py-2 " data-step="4" data-label="Time">4</button></li>
+                        <li><button class="mobile-step-link px-3 py-2 " data-step="5" data-label="Checkout">5</button></li>
+                        <li><button class="mobile-step-link px-3 py-2 " data-step="6" data-label="Bill">6</button></li>
+                    </ul>
+
+                    <!-- Black progress underline -->
+                    <div id="mobile-progress-line" class="md:hidden absolute bottom-0 left-0 h-[2px] bg-[#363636] w-0 transition-all duration-500"></div>
+                
                                     
                 <!-- Black progress underline -->
-                <div id="progress-line" class="absolute bottom-0 left-0 h-[2px] bg-[#363636] w-0 transition-all duration-500 "></div>
+                <div id="progress-line" class="hidden md:flex absolute bottom-0 left-0 h-[2px] bg-[#363636] w-0 transition-all duration-500 "></div>
                 </div>
 
                 <!-- Step Content -->
-                <div id="step-contents" class="p-4 mt-6">
+                <div id="step-contents" class="px-0 md:px-4 py-4 mt-6">
                     <!-- STEP 1 -->
                     <div id="step1" class="step-section text-[#363636]">
-                                <p class="text-xl font-medium">Are you veg or non-veg?</p>
+                                <p class="text-md md:text-xl font-medium">Are you veg or non-veg?</p>
                                 <!-- veg or non-veg -->
                                 <div id="veg-options" class="flex mt-6 mb-8 gap-4">
-                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636]">
-                                        <p class="option text-md px-14 py-2">Veg</p>
+                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
+                                        <p class="option text-md px-2 md:px-14 py-2">Veg</p>
                                     </div>
-                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636]">
-                                        <p class="option text-md px-10 py-2">Non-Veg</p>
+                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
+                                        <p class="option text-md px-2 md:px-10 py-2">Non-Veg</p>
                                     </div>
-                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636]">
-                                        <p class="option text-md px-4 py-2">Veg & Non-veg</p>
+                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
+                                        <p class="option text-md px-2 md:px-4 py-2">Veg & Non-veg</p>
                                     </div>
                                 </div>
 
                                 <!-- which meal you want to order -->
                                 <div class="mb-8">
-                                    <p class="text-xl font-medium">Which meal do you want to order?</p>
-                                    <div id="meal-options" class="grid grid-cols-3 gap-4 mt-6">
-                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636]">
+                                    <p class="text-md md:text-xl font-medium">Which meal do you want to order?</p>
+                                    <div id="meal-options" class="hidden md:grid grid-cols-3 gap-4 mt-6">
+                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
                                             <p class="meal text-md px-4 py-3 text-center">Morning Breakfast</p>
                                         </div>
-                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636]">
+                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
                                             <p class="meal text-md px-4 py-3 text-center">Morning Lunch</p>
                                         </div>
-                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636]">
+                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
                                             <p class="meal text-m px-4 py-3 text-center">Afternoon Lunch</p>
                                         </div>
-                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636]">
+                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
                                             <p class="meal text-md px-4 py-3 text-center">Evening Lunch</p>
                                         </div>
-                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636]">
+                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
                                             <p class="meal text-md px-4 py-3 text-center">Night Dinner</p>
                                         </div>
-                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636]">
+                                        <div class="meal border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
                                             <p class="meal text-md px-4 py-3 text-center">Fitness Freak</p>
                                         </div>
+                                    </div>
+
+                                    <div class="md:hidden flex flex-col mt-4">
+                                        <select id="" class="bg-[#FFFEF9] border border-[#ABABAB] rounded p-2 text-sm text-[#363636]">
+                                        <option disabled selected>Choose meal type</option>
+                                        <option>Morning Breakfast</option>
+                                        <option>Morning Lunch</option>
+                                        <option>Afternoon Lunch</option>
+                                        <option>Evening Lunvh</option>
+                                        <option>Night Dinner Lunch</option>
+                                        <option>Fitness Freak</option>
+                                        </select>
                                     </div>
                                 </div>
                 
                                 <!-- How many people will be eating -->
                                 <div>
-                                    <p class="text-xl font-medium">How many people will be eating?</p>
+                                    <p class="text-md md:text-xl font-medium">How many people will be eating?</p>
                                     
                                     <div class="mt-6 flex items-center gap-6">
-                                        <div id="minus" class="border-2 border-[#3636361A] rounded">
+                                        <div id="minus" class="border-2 border-[#3636361A] rounded cursor-pointer">
                                             <img src="images/Minus.png" alt="" class="w-full h-full object-contain px-1 py-1">
                                         </div>
                                         <div class="font-semibold">
                                             <p id="peopleCount">1</p>
                                         </div>
-                                        <div id="plus" class="border-2 border-[#3636361A] rounded border-[#363636]">
+                                        <div id="plus" class="border-2 border-[#3636361A] rounded border-[#363636] cursor-pointer">
                                             <img src="images/plus.png" alt="" class="w-full h-full object-contain px-1 py-1">
                                         </div>
                                     </div>
@@ -122,27 +157,29 @@
 
                     <!-- STEP 2 -->
                     <div id="step2" class="step-section hidden">
-                        <p class="text-xl font-medium">Which items do you want to add to to meal?</p>
+                        <p class="text-md md:text-xl font-medium">Which items do you want to add to to meal?</p>
 
                         <div class="mt-4">
-                            <p class="text-sm font-medium text-[#6A6A6A] mb-2">4 items selected</p>
+                            <p id="itemCount" class="text-sm font-medium text-[#6A6A6A] mb-2">0 items selected</p>
 
                             <!-- label 1 -->
-                            <label class="flex items-center space-x-6 cursor-pointer border-t border-b border-[#00000033] py-4">
-                                <input type="checkbox" class="h-5 w-5 -mt-20 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
+                            <label class="relative md:static flex items-center cursor-pointer border-t border-b border-[#00000033] py-4">
+                                <img src="images/mustang-aalo.png" alt="mustang-aalo" class="md:hidden h-22 w-22 object-contain">
+
+                                <input type="checkbox" class="absolute md:static h-5 w-5 -mt-16 ml-1 md:ml-0 md:-mt-20 md:mr-4 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
                                 
-                                <div class="flex space-x-4">
+                                <div class="flex space-x-4 md:space-x-4">
                                     <!-- image div -->
                                     <div>
-                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-24 w-24 object-contain">
+                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="hidden md:flex h-24 w-24 object-contain">
                                     </div>
                                     <!-- content div -->
                                     <div class="space-y-2">
-                                        <div class="flex justify-between text-xl text-[#363636] font-semibold">
+                                        <div class="flex justify-between text-md md:text-xl text-[#363636] font-semibold">
                                             <div>
                                                 <p>Mustang Aloo</p>
                                             </div>
-                                            <div class="ml-72">
+                                            <div class="md:ml-72">
                                                 <p>Rs. 345</p>
                                             </div>
                                         </div>
@@ -161,21 +198,23 @@
                             </label>
 
                             <!-- label 2 -->
-                            <label class="flex items-center space-x-6 cursor-pointer border-t border-b border-[#00000033] py-4">
-                                <input type="checkbox" class="h-5 w-5 -mt-20 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
+                            <label class="relative md:static flex items-center cursor-pointer border-t border-b border-[#00000033] py-4">
+                                <img src="images/mustang-aalo.png" alt="mustang-aalo" class="md:hidden h-22 w-22 object-contain">
+
+                                <input type="checkbox" class="absolute md:static h-5 w-5 -mt-16 ml-1 md:ml-0 md:-mt-20 md:mr-4 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
                                 
-                                <div class="flex space-x-4">
+                                <div class="flex space-x-4 md:space-x-4">
                                     <!-- image div -->
                                     <div>
-                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-24 w-24 object-contain">
+                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="hidden md:flex h-24 w-24 object-contain">
                                     </div>
                                     <!-- content div -->
                                     <div class="space-y-2">
-                                        <div class="flex justify-between text-xl text-[#363636] font-semibold">
+                                        <div class="flex justify-between text-md md:text-xl text-[#363636] font-semibold">
                                             <div>
                                                 <p>Mustang Aloo</p>
                                             </div>
-                                            <div class="ml-72">
+                                            <div class="md:ml-72">
                                                 <p>Rs. 345</p>
                                             </div>
                                         </div>
@@ -192,23 +231,25 @@
                                     </div>
                                 </div>
                             </label>
-
+                            
                             <!-- label 3 -->
-                            <label class="flex items-center space-x-6 cursor-pointer border-t border-b border-[#00000033] py-4">
-                                <input type="checkbox" class="h-5 w-5 -mt-20 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
+                            <label class="relative md:static flex items-center cursor-pointer border-t border-b border-[#00000033] py-4">
+                                <img src="images/mustang-aalo.png" alt="mustang-aalo" class="md:hidden h-22 w-22 object-contain">
+
+                                <input type="checkbox" class="absolute md:static h-5 w-5 -mt-16 ml-1 md:ml-0 md:-mt-20 md:mr-4 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
                                 
-                                <div class="flex space-x-4">
+                                <div class="flex space-x-4 md:space-x-4">
                                     <!-- image div -->
                                     <div>
-                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-24 w-24 object-contain">
+                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="hidden md:flex h-24 w-24 object-contain">
                                     </div>
                                     <!-- content div -->
                                     <div class="space-y-2">
-                                        <div class="flex justify-between text-xl text-[#363636] font-semibold">
+                                        <div class="flex justify-between text-md md:text-xl text-[#363636] font-semibold">
                                             <div>
                                                 <p>Mustang Aloo</p>
                                             </div>
-                                            <div class="ml-72">
+                                            <div class="md:ml-72">
                                                 <p>Rs. 345</p>
                                             </div>
                                         </div>
@@ -227,21 +268,23 @@
                             </label>
 
                             <!-- label 4 -->
-                            <label class="flex items-center space-x-6 cursor-pointer border-t border-b border-[#00000033] py-4">
-                                <input type="checkbox" class="h-5 w-5 -mt-20 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
+                            <label class="relative md:static flex items-center cursor-pointer border-t border-b border-[#00000033] py-4">
+                                <img src="images/mustang-aalo.png" alt="mustang-aalo" class="md:hidden h-22 w-22 object-contain">
+
+                                <input type="checkbox" class="absolute md:static h-5 w-5 -mt-16 ml-1 md:ml-0 md:-mt-20 md:mr-4 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
                                 
-                                <div class="flex space-x-4">
+                                <div class="flex space-x-4 md:space-x-4">
                                     <!-- image div -->
                                     <div>
-                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-24 w-24 object-contain">
+                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="hidden md:flex h-24 w-24 object-contain">
                                     </div>
                                     <!-- content div -->
                                     <div class="space-y-2">
-                                        <div class="flex justify-between text-xl text-[#363636] font-semibold">
+                                        <div class="flex justify-between text-md md:text-xl text-[#363636] font-semibold">
                                             <div>
                                                 <p>Mustang Aloo</p>
                                             </div>
-                                            <div class="ml-72">
+                                            <div class="md:ml-72">
                                                 <p>Rs. 345</p>
                                             </div>
                                         </div>
@@ -260,21 +303,23 @@
                             </label>
 
                             <!-- label 5 -->
-                            <label class="flex items-center space-x-6 cursor-pointer border-t border-[#00000033] py-4">
-                                <input type="checkbox" class="h-5 w-5 -mt-20 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
+                            <label class="relative md:static flex items-center cursor-pointer border-t border-b border-[#00000033] py-4">
+                                <img src="images/mustang-aalo.png" alt="mustang-aalo" class="md:hidden h-22 w-22 object-contain">
+
+                                <input type="checkbox" class="absolute md:static h-5 w-5 -mt-16 ml-1 md:ml-0 md:-mt-20 md:mr-4 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
                                 
-                                <div class="flex space-x-4">
+                                <div class="flex space-x-4 md:space-x-4">
                                     <!-- image div -->
                                     <div>
-                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-24 w-24 object-contain">
+                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="hidden md:flex h-24 w-24 object-contain">
                                     </div>
                                     <!-- content div -->
                                     <div class="space-y-2">
-                                        <div class="flex justify-between text-xl text-[#363636] font-semibold">
+                                        <div class="flex justify-between text-md md:text-xl text-[#363636] font-semibold">
                                             <div>
                                                 <p>Mustang Aloo</p>
                                             </div>
-                                            <div class="ml-72">
+                                            <div class="md:ml-72">
                                                 <p>Rs. 345</p>
                                             </div>
                                         </div>
@@ -291,11 +336,47 @@
                                     </div>
                                 </div>
                             </label>
+
+                            <!-- label 6 -->
+                            <label class="relative md:static flex items-center cursor-pointer border-t border-b border-[#00000033] py-4">
+                                <img src="images/mustang-aalo.png" alt="mustang-aalo" class="md:hidden h-22 w-22 object-contain">
+
+                                <input type="checkbox" class="absolute md:static h-5 w-5 -mt-16 ml-1 md:ml-0 md:-mt-20 md:mr-4 accent-red-500 cursor-pointer border-2 border-[#36363633] hover:border-[#363636]">
+                                
+                                <div class="flex space-x-4 md:space-x-4">
+                                    <!-- image div -->
+                                    <div>
+                                        <img src="images/mustang-aalo.png" alt="mustang-aalo" class="hidden md:flex h-24 w-24 object-contain">
+                                    </div>
+                                    <!-- content div -->
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between text-md md:text-xl text-[#363636] font-semibold">
+                                            <div>
+                                                <p>Mustang Aloo</p>
+                                            </div>
+                                            <div class="md:ml-72">
+                                                <p>Rs. 345</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm text-[#6A6A6A]">with freshly prepared something something sauce </p>
+                                        <div class="flex text-[#6A6A6A] items-center">
+                                            <div class="py-2">
+                                                <p class="text-sm font-medium pr-2">678 kcal</p>
+                                            </div>
+                                            <div class="h-2 border-l border-gray-400"></div>
+                                            <div class="py-2">
+                                                <p class="text-sm font-medium px-2">250 g</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+
                         </div>
                         <!-- buttons div -->
                         <div class="flex justify-between py-8">
                             <div id=""  class="back-button border-2 border-[#363636] rounded">
-                                <p class="text-sm text-[#363636] font-medium px-8 py-3">Back</p>
+                                <p class="text-sm text-[#363636] font-medium px-8 md:px-8 py-3 md:py-3">Back</p>
                             </div>
 
                             <div id=""  class="next-button bg-[#D9253C] border-2 border-[#D9253C] rounded">
@@ -306,7 +387,7 @@
 
                     <!-- STEP 3 -->
                     <div id="step3" class="step-section hidden space-y-2">
-                        <p class="text-xl font-medium">Do you have any special preference?</p>
+                        <p class="text-md md:text-xl font-medium">Do you have any special preference?</p>
                         <p class="text-sm text-[#4F4F4F] mr-8 leading-loose pb-4">If you have any allergies or anything that you want to add or remove, please add these special requirements below.</p>
                         <div class="">
                         <textarea id="notes" rows="4" placeholder="Add your preferences here..."
@@ -386,8 +467,8 @@
             </div>
 
 
-            <!-- Right Box -->
-            <div class="bg-[#3636360D] ml-12 rounded h-[780px]">
+            <!-- RIGHT BOX -->
+            <div class="hidden md:block bg-[#3636360D] ml-12 rounded h-full">
                 <div class="p-4">
                     <p class="text-xl font-semibold mb-4">Meal</p>
                     <span id="selectedType" class="hidden border-2 border-[#00000033] bg-[#E6E6E6] px-4 py-1 rounded"></span>
@@ -396,23 +477,24 @@
 
                     <!-- Added Items Section (hidden initially) -->
                     <div id="addedItemsSection" class="hidden">
-                        <p class="text-xl font-semibold my-4">Added items</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-semibold my-4">Added items</p>
+                            <p id="right-itemCount" class="text-sm font-medium text-[#6A6A6A]">4 items</p>
+                        </div>
                         <div id="addedItems" class="space-y-4 scrollbar-hide overflow-y-auto max-h-96"></div>
                     </div> 
 
+                    <!-- PREFERENCES (also hidden initially) -->
                    <div id="preferences" class="hidden mt-6">
                         <p class="text-xl font-semibold mb-2">Preference</p>
-                        <p id="preferenceText"
-                            class="text-[#4F4F4F] py-3 text-sm leading-relaxed whitespace-pre-line"></p>
-                        </div>
+                        <p id="preferenceText" class="text-[#4F4F4F] py-3 text-sm leading-relaxed whitespace-pre-line"></p>
                     </div>
+                </div>
             </div>
             </div>
 
         </div>
     </section>
-
-
 
 
 <script src="script/custom-meal.js"></script>
