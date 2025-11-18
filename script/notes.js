@@ -1,4 +1,4 @@
-  // MEAL  --> STEP 1
+  // STEP1
   const vegOptions = document.querySelectorAll("#veg-options .option");
   const mealOptions = document.querySelectorAll("#meal-options .meal");
   const selectedType = document.getElementById("selectedType");
@@ -17,9 +17,9 @@
   }
 
     // Handle Veg/Non-Veg selection
-    vegOptions.forEach((opt) => { 
+    vegOptions.forEach((opt) => { // the outer loop is to add a click listener to each meal item
         opt.addEventListener("click", () => {
-            vegOptions.forEach((o) => o.classList.remove("bg-black","border-black", "text-white")); 
+            vegOptions.forEach((o) => o.classList.remove("bg-black","border-black", "text-white")); // inner loop is to remove "active" styles from all meals items before applying it to the clicked one
             opt.classList.add("bg-black", "border-black", "text-white");
             selectedType.textContent = opt.innerText.trim();
             showElement(selectedType);
@@ -55,7 +55,7 @@
 
 
 
-    // MEAL ITEMS  --> STEP 2 
+    // STEP2
     const stepLinks = document.querySelectorAll(".step-link, .mobile-step-link");
     const sections = document.querySelectorAll(".step-section");
     const progressLine = document.getElementById("progress-line");
@@ -84,21 +84,24 @@
 
         currentStep = step;
 
+        // Update step links color
         stepLinks.forEach(l => l.classList.remove("text-[#363636]"));
         stepLinks[step - 1].classList.add("text-[#363636]");
 
+        // Animate progress line
         updateProgress(step);
 
-        sections.forEach(sec => sec.classList.add("hidden")); 
-        const activeSection = document.getElementById(`step${step}`); 
-        if (activeSection) activeSection.classList.remove("hidden");
+        // Show step content
+        sections.forEach(sec => sec.classList.add("hidden")); // hides all the sections
+        const activeSection = document.getElementById(`step${step}`); // finds the section that matches the current step number
+        if (activeSection) activeSection.classList.remove("hidden"); // removes the hidden class from that section 
     }
 
     // Step link click
     stepLinks.forEach(link => {
         link.addEventListener("click", (e) => {
-            e.preventDefault();; // stops teh reload or scroll to the top
-            const step = parseInt(link.dataset.step); 
+            e.preventDefault(); // stops the reload or scroll to the top
+            const step = parseInt(link.dataset.step);  // gets the dataset step such as (data-step = "1")
             showStep(step);
         });
     });
@@ -137,7 +140,7 @@ const rightItemCount = document.getElementById('right-itemCount');
 // function to update count text
 function updateItemCount() {
   const count = document.querySelectorAll('#step2 input[type="checkbox"]:checked').length;
-  const text1 = `${count} item${count !== 1 ? 's' : ''} selected`; 
+  const text1 = `${count} item${count !== 1 ? 's' : ''} selected`; // used ternary operator
 
     const text2 = `${count} item${count !== 1 ? 's' : ''}`;
 
@@ -145,6 +148,7 @@ function updateItemCount() {
   if (itemCount) itemCount.textContent = text1;
   if (rightItemCount) rightItemCount.textContent = text2;
 
+  // show/hide right section
   if (count > 0) {
     addedItemsSection.classList.remove('hidden');
   } else {
@@ -184,11 +188,14 @@ checkboxes.forEach(checkbox => {
           <button class="absolute top-1 right-1 text-[#363636] hover:bg-[#0000001A] font-normal text-4xl md:px-2 rounded">&times;</button>
         `;
 
-        // item removble when "x" is clicked
+        // remove item when "x" clicked
         const removeBtn = itemDiv.querySelector('button');
         removeBtn.addEventListener('click', () => {
+          // uncheck the corresponding checkbox
           cb.checked = false;
+          // remove this item from the right side
           itemDiv.remove();
+          // call updateItemCount to refresh both counters and visibility
           updateItemCount();
         });
 
@@ -196,28 +203,33 @@ checkboxes.forEach(checkbox => {
       }
     });
 
+    // finally, update the counts and visibility
     updateItemCount();
   });
 });
+
+// initialize once at load
 updateItemCount();
 
 
 
-// PREFERENCES --> STEP 3s
-const notesInput = document.getElementById('notes');         
-const preferencesBox = document.getElementById('preferences'); 
-const preferenceText = document.getElementById('preferenceText'); 
+// PREFERENCES
+const notesInput = document.getElementById('notes');          // the textarea in Step 3
+const preferencesBox = document.getElementById('preferences'); // right box section
+const preferenceText = document.getElementById('preferenceText'); // text display area
 
 // Listen for typing in the Step 3 textarea
 notesInput.addEventListener('input', () => {
     const text = notesInput.value.trim();
 
     if (text !== "") {
-        preferencesBox.classList.remove('hidden');  
-        preferenceText.textContent = text; 
+        // show and update the right box preference text
+        preferencesBox.classList.remove('hidden');  // it removes the hidden class
+        preferenceText.textContent = text; // updates the text inside the box with what the user have typed
     } else {
-        preferencesBox.classList.add('hidden'); 
-        preferenceText.textContent = ""; 
+        // hide if empty 
+        preferencesBox.classList.add('hidden'); //it adds the hidden class back
+        preferenceText.textContent = ""; // clears the text inside
     }
 });
 
@@ -239,8 +251,8 @@ mobileSteps.forEach(btn => {
     const firstRect = mobileSteps[0].getBoundingClientRect();
     const currentRect = btn.getBoundingClientRect();
     const width = currentRect.right - firstRect.left;
-    mobileProgressLine.style.width = `${width}px`;  
+    mobileProgressLine.style.width = `${width}px`;  // sets the width on the progress line so it visually reaches the click steps
   });
 });
 
-mobileSteps[0].click(); 
+mobileSteps[0].click();  // automatically clicks the first step when the page loads
