@@ -244,3 +244,58 @@ mobileSteps.forEach(btn => {
 });
 
 mobileSteps[0].click(); 
+
+
+
+// STEP 3
+    const subs = document.getElementById("subscription-plan");
+    const time = document.getElementById("delivery-time");
+    const subsBox = document.getElementById("subscription-plan-right");
+    const timeBox = document.getElementById("delivery-time-right");
+    const detailsDiv = document.getElementById("delivery-details");
+
+    function updateSummary() {
+        if(subs.value || time.value) {
+            detailsDiv.classList.remove("hidden");
+            subsBox.textContent = subs.value;
+            timeBox.textContent = time.value;
+        } else {
+            detailsDiv.classList.add("hidden");
+        }
+    }
+
+    // Listen to changes
+    subs.addEventListener("change", updateSummary);
+    time.addEventListener("change", updateSummary);
+
+
+
+// HEADING
+const heading = document.getElementById("heading");
+
+// Map step numbers to heading text
+const stepHeadings = {
+    1: "Set your meal preferences",
+    2: "Create custom meal",
+    3: "Choose your delivery time",
+};
+
+function showStep(step) {
+    if (step <= 1) step = 1;
+    if (step > stepLinks.length) step = stepLinks.length;
+
+    currentStep = step;
+
+    stepLinks.forEach(l => l.classList.remove("text-[#363636]"));
+    stepLinks[step - 1].classList.add("text-[#363636]");
+
+    updateProgress(step);
+
+    // Show/Hide sections
+    sections.forEach(sec => sec.classList.add("hidden")); 
+    const activeSection = document.getElementById(`step${step}`); 
+    if (activeSection) activeSection.classList.remove("hidden");
+
+    // Update heading text
+    heading.textContent = stepHeadings[step] || "Set your meal preferences";
+}

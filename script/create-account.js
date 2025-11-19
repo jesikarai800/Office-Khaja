@@ -101,5 +101,6 @@ btn.addEventListener("click", function (e) {
     else {
         passwordError.classList.add("hidden");
         confirmPassword.classList.remove("border-[#D00416]");
+        window.location.href = "./verify-phone-number.html";
     }
 });
