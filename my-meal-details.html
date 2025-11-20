@@ -13,7 +13,7 @@
 <body>
     <!-- NAV BAR -->
     <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[52px] md:h-[96px] border-b border-[#36363633]">
-        <div class="max-w-6xl mx-auto">
+        <div class="container mx-auto">
             <div class="flex justify-between items-center px-6 md:px-0">
                 <img src="images/Office Khaja Logo Red.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
 
@@ -45,34 +45,32 @@
     </nav>
 
     <section class="pt-4 md:pt-12">
-        <div class="max-w-6xl mx-auto px-6 md:px-0">
+        <div class="container mx-auto px-6 md:px-0">
             <h1 id="heading" class="text-xl md:text-4xl font-semibold">Morning Breakfast</h1>
 
             <!-- Meal Details -->
             <div class="flex flex-wrap text-[#4F4F4F] mt-8 gap-1">
                 <div class="flex items-center space-x-2 border border-[#36363633] rounded py-1 px-2 w-1/2 md:w-auto">
                     <img src="images/fork-knife.png" alt="" class="h-[18px] w-[18px]">
-                    <p class="text-md">veg-NonVeg</p>
+                    <p id="veg-NonVeg" class="text-md">veg-NonVeg</p>
                 </div>
                 <div class="flex items-center space-x-2 border border-[#36363633] rounded py-1 px-2 sm:w-1/2 md:w-auto">
                     <img src="images/serving.png" alt="" class="h-[18px] w-[18px]">
-                    <p class="text-md">5 Servings</p>
+                    <p id="no-of-servings" class="text-md">5 Servings</p>
                 </div>
                 <div class="flex items-center space-x-2 border border-[#36363633] rounded py-1 px-2 sm:w-1/2 md:w-auto">
                     <img src="images/location.png" alt="" class="h-[18px] w-[18px]">
-                    <p class="text-md">Bajrabarahi</p>
+                    <p id="delivery-location" class="text-md">Bajrabarahi</p>
                 </div>
                 <div class="flex items-center space-x-2 border border-[#36363633] rounded py-1 px-2 sm:w-1/2 md:w-auto">
                     <img src="images/delivery-scooter.png" alt="" class="h-[22px] w-[18px] object-contain">
-                    <p class="text-md">12 Nov 2025, (02:20 - 03:00)PM</p>
+                    <p id="delivery-time" class="text-md">12 Nov 2025, (02:20 - 03:00)PM</p>
                 </div>
                 <div class="flex items-center space-x-2 border border-[#36363633] rounded py-1 px-2 sm:w-1/2 md:w-auto">
                     <img src="images/weekly.png" alt="" class="h-[18px] w-[20px] object-contain">
-                    <p class="text-md">Weekly Plan</p>
+                    <p id="weekly-plan" class="text-md">Weekly Plan</p>
                 </div>
             </div>
-
-
 
 
             <hr class="mt-6">
@@ -81,11 +79,30 @@
                 <!-- Left Column -->
                 <div>
                     <p class="hidden md:flex text-xl font-semibold">Preference</p>
-                    <p class="md:hidden text-md font-semibold">Meal Preference</p>
-                    <p class="mt-4 md:mt-4 text-sm text-[#6A6A6A] leading-relaxed">
+                    <p class="hidden md:flex mt-4 md:mt-4 text-sm text-[#6A6A6A] leading-relaxed">
                         "Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games. "Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games.</p>
-                    <hr class="md:hidden mt-2">
-                    
+                    <!-- <hr class="md:hidden mt-2"> -->
+                    <div class="md:hidden border-b pb-3">
+                        <div id="toggleBtn" class="flex justify-between items-center cursor-pointer select-none">
+                            <p class="font-semibold text-[#4F4F4F]">Meal preference</p>
+                            <img id="icon"
+                                src="images/plus.png"
+                                data-open-src="images/Minus.png"
+                                data-closed-src="images/plus1.png"
+                                alt="toggle"
+                                class="w-5 h-5 object-contain transition-all duration-300 cursor-pointer">
+                        </div>
+
+                        <div id="redLine" class="h-[2px] bg-red-500 w-12 transition-all duration-300"></div>
+
+                        <p id="preview" class="text-sm text-[#6A6A6A] mt-2"></p>
+
+                        <div id="fullContent"
+                            class="text-sm text-[#6A6A6A] mt-2 overflow-hidden max-h-0 transition-all duration-300">
+                        </div>
+
+                    </div>
+
                         <p class="mt-6 md:mt-12 text-xl font-semibold">Meal Items</p>
                     <div class="mt-1">
                         <p id="itemCount" class="text-sm font-semibold text-[#6A6A6A] mb-2 md:mb-4">0 items</p>
@@ -327,6 +344,54 @@ labels.forEach(label => {
 });
 
 updateContent();
+</script>
+
+<script>
+const userPreference =
+    "I do not want any garlic and mushroom as I am allergic to both, and avoid peanuts, soy, and onions as well.";
+
+const preview = document.getElementById("preview");
+const fullContent = document.getElementById("fullContent");
+const btn = document.getElementById("toggleBtn");
+const icon = document.getElementById("icon");
+const redLine = document.getElementById("redLine");
+
+// Set text
+fullContent.textContent = userPreference;
+
+preview.textContent =
+    userPreference.length > 60
+        ? userPreference.substring(0, 60) + "…"
+        : userPreference;
+
+let isOpen = false;
+
+btn.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+        // OPEN
+        fullContent.style.maxHeight = fullContent.scrollHeight + "px";
+        preview.classList.add("hidden");
+
+        // Switch image to minus
+        icon.src ="images/Minus.png";
+
+        redLine.classList.remove("w-12");
+        redLine.classList.add("w-24");
+    } else {
+        // CLOSE
+        fullContent.style.maxHeight = "0px";
+        preview.classList.remove("hidden");
+
+        // Switch image to plus
+        icon.src = "images/plus.png";
+
+        redLine.classList.remove("w-24");
+        redLine.classList.add("w-12");
+    }
+});
+
 </script>
 
 </body>
