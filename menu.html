@@ -13,78 +13,77 @@
 </head>
 <body class="bg-[#FFFFF9]">
     <!-- NAV BAR -->
-    <nav class="bg-[#D9253C] sticky top-0 z-40 h-[52px] md:h-[96px]">
-        <div class="container mx-auto flex items-center justify-between px-4">
-            <div class="flex justify-between items-center">
-                <img src="images/Office Khaja Logo White.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
-                
+    <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[70px] md:h-[96px] border-b border-[#36363633] py-2 md:py-0">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center px-6 md:px-0">
+                <img src="images/Office Khaja Logo Red.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
+
                 <!-- Desktop Links -->
-                <div>
-                    <ul class="hidden md:flex text-white text-md tracking-wide font-medium gap-6 ml-14">
-                        <li class=""><a href="./index.html"> Home</a></li>
-                        <li class=""><a href="./menu.html"> Menus</a></li>
-                        <li class=""><a href="./contact.html"> Contact</a></li>
-                        <li class=""><a href="./about.html"> About</a></li>
+                <div class="flex justify-center">
+                    <ul class="hidden md:flex text-[#363636] text-md tracking-wide font-semibold gap-6 ml-14">
+                        <li><a href="./menu.html" class="border-b-4 border-[#d9253c] py-9">Menus</a></li>
+                        <li><a href="./my-meal-details.html" class="hover:border-b-4 border-[#d9253c] py-9">My Meals</a></li>
+                        <li><a href="./create-custom-meal.html" class="hover:border-b-4 border-[#d9253c] py-9">Create Meal</a></li>
+                        <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-9">My Orders</a></li>
+                        <li><a href="#" class="hover:border-b-4 border-[#d9253c] py-9">My Cart</a></li>
                     </ul>
                 </div>
-            </div>
 
-            <div class="hidden md:flex flex justify-between gap-4 ml-16">
-                <a href="./log-in.html" class="block py-2 w-[120px] h-[40px] flex justify-center text-sm text-white font-medium border-2 border-white rounded hover:bg-white hover:text-[#D9253C]">Log In</a>
-                <a href="./create-account.html" class="bg-white text-[#D9253C] block py-2 w-[120px] h-[40px] flex justify-center text-sm font-medium border-2 border-white rounded hover:bg-white hover:text-[#D9253C]">Sign Up</a>
-            </div>
-
-            <div class="md:hidden">
-                <button id="hamburger" class="space-y-[5px] md:hidden" type="button">
-                    <span class="line block rounded-lg w-[22px] h-[2px] bg-[#FFFFFF]"></span>
-                    <span class="line block rounded-lg w-[22px] h-[2px] bg-[#FFFFFF]"></span>
-                    <span class="line block rounded-lg w-[22px] h-[2px] bg-[#FFFFFF]"></span>
-                </button>
-            </div>
+                <!-- Profile Image -->
+                <div id="img-profile" class="relative flex items-center justify-end cursor-pointer">
+                    <img src="images/custom-mean-profile.png" 
+                        alt="" 
+                        class="w-[48px] h-[48px] md:w-[64px] md:h-[64px] object-cover rounded-full">
+                    
+                    <!-- Profile Dropdown -->
+                    <div id="profile" class="hidden absolute right-0 mt-[350px] w-64 bg-white border rounded-lg shadow-lg z-50">
+                        <div class="flex items-center gap-3 p-4 border-b border-gray-200">
+                            <img src="images/custom-mean-profile.png" class="w-12 h-12 rounded-full object-cover">
+                            <div class="flex flex-col">
+                                <p class="text-md font-semibold">Roshan Khadka</p>
+                                <p class="text-sm text-gray-500">+977 9863748652</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col p-4 space-y-3">
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/UserCircle.svg" class="w-6 h-6">
+                                <span class="text-md">My Profile</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/BellRinging.svg" class="w-6 h-6">
+                                <span class="text-md">Notification</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/SignOut.svg" class="w-6 h-6">
+                                <span class="text-md">Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>        
         </div>
     </nav>
 
     <!-- Heading -->
-    <section class="pt-8 pb-8 md:pb-0 md:pt-14">
+    <section class="pt-6 md:pb-0 md:pt-12 px-0 md:px-4">
         <div class="container mx-auto px-6 md:px-0">
-            <div class="text-2xl md:text-4xl font-semibold mb-6 md:mb-12">
-                <h2 class="text-[#363636]">Office Khaja <span class="text-[#D9253C]">menus</span></h2>
-            </div>
-
-            <!-- Mobile View Filter -->
-             <div class="md:hidden flex justify-between items-center pb-10">
-                <div class="flex flex-col">
-                    <select class="py-2 px-2 border border-[#ABABAB] rounded focus:outline-none focus:ring-1 focus:ring-[#0a2458] text-md text-[#363636]">
-                        <!-- <option disabled selected class="text-[#363636]">Choose a Test</option> -->
-                        <option value="">Morning Breakfast</option>
-            
-                    </select>
+            <div class="flex justify-between items-center">
+                <div class="text-2xl md:text-4xl font-semibold">
+                    <h2 class="text-[#363636]">Our menus</h2>
+                </div>                
+                <div class="hidden md:flex px-3 py-3 bg-[#d9253c] rounded">
+                    <p class="text-white text-md font-medium">Create Custom Meal</p>
                 </div>
-
-                <div class="px-6">
-                    <p class="text-[#000000] text-md font-medium tracking-wide">Filters</p>
-                </div>
-            </div>
-
-            <!-- Log In / Sign Up -->
-            <div class="border-1 rounded-lg flex items-center justify-center">
-                <img src="images/menuhero-bg.png" alt="" class="rounded-lg relative w-full h-[190px] md:h-[160px]">
-
-                <div class="absolute py-4"> 
-                    <p class="text-white font-medium text-xl md:text-2xl px-12 md:px-0 flex justify-center items-center">
-                        Log in or sign up to place order and custom meal creation.
-                    </p>
-                    <div class="pt-6 flex items-center justify-center gap-4">
-                        <a href="./log-in.html" class="py-2 px-14 md:px-8 bg-white rounded text-white font-medium"><span class="text-sm font-semibold text-[#D9253C]">Log In</span></a>
-                        <a href="./create-account.html" class="py-2 px-12 md:px-6 rounded border-2 border-white text-white text-sm font-medium hover:bg-white hover:text-[#d9253c] hover:font-semibold transition-colors duration-200">Sign Up</a>
-                    </div>
+                <div class="md:hidden flex gap-2 px-2 py-1 border border-[#363636] rounded">
+                    <p class="text-md font-medium">Filter</p>
+                    <img src="images/filter.svg" alt="" class="">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Filter -->
-    <section class="hidden md:flex md:py-12">
+    <section class="hidden md:flex md:pb-12 px-0 md:px-4 mt-6 md:mt-12">
         <div class="container mx-auto">
             <div class="border-t border-l border-b border-[#D9253C] flex">
                 <div class="bg-[#363636]">
@@ -110,7 +109,7 @@
     </section>
 
     <!-- menu cards -->
-    <section class="py-6 md:py-0">
+    <section class="md:px-4 mt-6 mb-32 md:mb-0 md:mt-0">
         <div class="container mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 px-6 md:px-0">
                 <!-- card 1 -->
@@ -374,7 +373,7 @@
     </section>
 
     <!-- Footer -->
-    <div class="mt-20 md:mt-32 relative text-white">
+    <div class="hidden md:block mt-20 md:mt-32 relative text-white">
         <img src="images/Footer-Arc.svg" alt="" class="hidden md:flex absolute inset-0 w-full md:h-full h-[800px] object-cover object-top">
         <img src="images/Footer-Arc-Mobile.svg" alt="" class="md:hidden absolute inset-0 w-[900px] h-[800px]">
         <!-- Footer Content -->
@@ -434,5 +433,37 @@
             </div>
         </div>  
     </div>
+
+    <!-- Mobile nav -->
+    <section class="md:hidden">
+        <div class="flex items-center justify-center gap-8 py-2 fixed bottom-0 left-0 w-full bg-[#FFFEF9] z-40 border-t">
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./menu.html'">
+                <img src="images/ForkKnife-active.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#d9253c]">Menu</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meal-details.html'">
+                <img src="images/Oven.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Meals</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./create-custom-meal.html'">
+                <img src="images/plus-create-menu.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Create Meal</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./orders-listing.html'">
+                <img src="images/ShoppingCart.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Orders</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-cart.html'">
+                <img src="images/ShoppingBagOpen.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Carts</p>
+            </div>
+        </div>
+    </section>
+
+<script src="script/profile-dropdown.js"></script>
 </body>
 </html>

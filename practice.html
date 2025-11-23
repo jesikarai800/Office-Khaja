@@ -4,18 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/css/icofont.min.css">
+
 </head>
 <body>
-    <script>
-        async function greet() {
-    return "Hello!";
-}
+    
+    <!-- Mobile Logged out -->
+    <!-- <div id="mobile-logged-out" class="w-[200px] h-full py-12">
+        <div class="flex justify-center">
+            <ul class="text-[#363636] text-lg tracking-wide font-semibold gap-6 space-y-4 
+                    flex flex-col items-center justify-center">
+                <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-2">Home</a></li>
+                <li><a href="./my-meal-details.html" class="hover:border-b-4 border-[#d9253c] py-2">Menu</a></li>
+                <li><a href="./create-custom-meal.html" class="hover:border-b-4 border-[#d9253c] py-2">Contact</a></li>
+                <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-2">About</a></li>
+            </ul>
+        </div>
+        <div class="mt-12 px-4">
+            <div class="border-2 border-[#D9253C] flex justify-center items-center py-2 rounded">
+                <a href="./log-in.html" class="text-[#D9253C] text-md font-semibold">Log In</a>
+            </div>
+            <div class="mt-4 bg-[#D9253C] border-2 border-[#D9253C] flex justify-center items-center py-2 rounded">
+                <a href="./create-account.html" class="text-white text-md font-medium">Sign Up</a>
+            </div>
+        </div>
+    </div> -->
 
-greet().then((msg) => console.log(msg)); // Output: Hello!
+<!-- 
+<div class="flex items-center justify-center gap-8 py-4">
+    <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./menu.html'">
+        <img src="images/ForkKnife.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+        <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Menu</p>
+    </div>
+
+    <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meal-details.html'">
+        <img src="images/Oven.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+        <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Meals</p>
+    </div>
+
+    <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./create-custom-meal.html'">
+        <img src="images/plus-create-menu.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+        <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Create Meal</p>
+    </div>
+
+    <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./orders-listing.html'">
+        <img src="images/ShoppingCart.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+        <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Orders</p>
+    </div>
+
+    <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./menu.html'">
+        <img src="images/ShoppingBagOpen.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+        <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Carts</p>
+    </div>
+
+</div> -->
 
 
+<div id="profile" class="bg-[#FFFEF9] h-[280px] w-[280px] border px-4 py-6 rounded-lg">
+    <div class="flex flex-row items-center gap-2">
+        <div>
+            <img src="images/custom-mean-profile.png" alt="" class="">
+        </div>
+        <div class="flex-col">
+            <p class="text-md font-semibold">Roshan Khadka</p>
+            <p class="text-sm">+977 9863748652</p>
+        </div>
+    </div>
+    <hr class="mt-6 border-[#36363633]">
+    <div class="mt-6 flex flex-col space-y-3">
+        <div class="flex gap-4">
+            <a href="">
+                <img src="images/UserCircle.svg" alt="" class="h-[24px] w-[24px] object-contain">
+            </a>
+            <a href="">
+                <p class="text-md">My Profile</p>
+            </a>
+        </div>
+        <div class="flex gap-4">
+            <a href="">
+                <img src="images/BellRinging.svg" alt="" class="h-[24px] w-[24px] object-contain">
+            </a>
+            <a href="">
+                <p class="text-md">Notification</p>
+            </a>
+        </div>
+        <div class="flex gap-4">
+            <a href="">
+                <img src="images/SignOut.svg" alt="" class="h-[24px] w-[24px] object-contain">
+            </a>
+            <a href="">
+                <p class="text-md">Log Out</p>
+            </a>
+        </div>
 
+    </div>
+</div>
 
-    </script>
 </body>
 </html>

@@ -38,12 +38,34 @@
             </div>
 
             <div class="md:hidden">
-                <button id="hamburger" class="space-y-[5px] md:hidden" type="button">
+                <button id="index-hamburger" class="space-y-[5px] md:hidden" type="button">
                     <span class="line block rounded-lg w-[22px] h-[2px] bg-[#FFFFFF]"></span>
                     <span class="line block rounded-lg w-[22px] h-[2px] bg-[#FFFFFF]"></span>
                     <span class="line block rounded-lg w-[22px] h-[2px] bg-[#FFFFFF]"></span>
                 </button>
             </div>
+
+            <!-- Mobile Logged out -->
+            <div id="mobile-logged-out" class="fixed top-0 left-0 h-full w-1/2 bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300">
+                <div class="pt-20 px-6">
+                    <ul class="text-[#363636] text-lg tracking-wide font-semibold gap-6 flex flex-col justify-center items-center">
+                        <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-2">Home</a></li>
+                        <li><a href="./my-meal-details.html" class="hover:border-b-4 border-[#d9253c] py-2">Menu</a></li>
+                        <li><a href="./create-custom-meal.html" class="hover:border-b-4 border-[#d9253c] py-2">Contact</a></li>
+                        <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-2">About</a></li>
+                    </ul>
+
+                    <div class="mt-12">
+                        <div class="border-2 border-[#D9253C] flex justify-center items-center py-2">
+                            <a href="./log-in.html" class="text-[#D9253C] text-md font-semibold">Log In</a>
+                        </div>
+                        <div class="mt-4 bg-[#D9253C] border-2 border-[#D9253C] flex justify-center items-center py-2   ">
+                            <a href="./create-account.html" class="text-white text-md font-medium">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </nav>
 
@@ -360,7 +382,7 @@
                     <div class="mt-6 md:mt-0">
                     <p class="text-xl font-semibold">Explore</p>
                     <ul class="text-md md:text-sm leading-loose mt-4">
-                        <li><a href="#">Menus</a></li>
+                        <li><a href="./menu.html">Menus</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -403,6 +425,13 @@
     </section>
 
     <script src="script/arrow.js"></script>
+    <script>
+        const mobile_logged_out = document.getElementById("mobile-logged-out");
+        const hamBtn = document.getElementById("index-hamburger");
 
+        hamBtn.addEventListener("click", () => {
+            mobile_logged_out.classList.toggle("-translate-x-full");
+        });
+    </script>
 </body>
 </html>

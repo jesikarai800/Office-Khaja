@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/css/icofont.min.css">
+</head>
+<body>
+    <!-- NAV BAR -->
+    <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[70px] md:h-[96px] border-b border-[#36363633] py-2 md:py-0">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center px-6 md:px-0">
+                <img src="images/Office Khaja Logo Red.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
+
+                <!-- Desktop Links -->
+                <div class="flex justify-center">
+                    <ul class="hidden md:flex text-[#363636] text-md tracking-wide font-semibold gap-6 ml-14">
+                        <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-9">Menus</a></li>
+                        <li><a href="./my-meal-details.html" class="hover:border-b-4 border-[#d9253c] py-9">My Meals</a></li>
+                        <li><a href="./create-custom-meal.html" class="hover:border-b-4 border-[#d9253c] py-9">Create Meal</a></li>
+                        <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-9">My Orders</a></li>
+                        <li><a href="#" class="border-b-4 border-[#d9253c] py-9">My Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Profile Image -->
+                <div id="img-profile" class="relative flex items-center justify-end cursor-pointer">
+                    <img src="images/custom-mean-profile.png" 
+                        alt="" 
+                        class="w-[48px] h-[48px] md:w-[64px] md:h-[64px] object-cover rounded-full">
+                    
+                    <!-- Profile Dropdown -->
+                    <div id="profile" class="hidden absolute right-0 mt-[350px] w-64 bg-white border rounded-lg shadow-lg z-50">
+                        <div class="flex items-center gap-3 p-4 border-b border-gray-200">
+                            <img src="images/custom-mean-profile.png" class="w-12 h-12 rounded-full object-cover">
+                            <div class="flex flex-col">
+                                <p class="text-md font-semibold">Roshan Khadka</p>
+                                <p class="text-sm text-gray-500">+977 9863748652</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col p-4 space-y-3">
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/UserCircle.svg" class="w-6 h-6">
+                                <span class="text-md">My Profile</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/BellRinging.svg" class="w-6 h-6">
+                                <span class="text-md">Notification</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/SignOut.svg" class="w-6 h-6">
+                                <span class="text-md">Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </nav>
+
+    <section class="my-6 md:my-12 px-6 md:px-4">
+        <div class="container mx-auto">
+            <div class="flex items-end">
+                <h1 id="heading" class="text-xl md:text-4xl font-semibold">My cart</h1>
+                <!-- <p id="" class="text-lg">(4 items)</p> -->
+            </div>
+
+            <div class="mt-6 md:mt-12 grid grid-cols-1 md:grid-cols-[68%,30%] gap-4">
+                <!-- left side -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-32 md:mb-0">                            
+                    <!-- card 1 -->
+                    <div class="border border-[#CBCBCB] rounded-lg p-4">
+                        <div class="flex justify-between">
+                            <div>
+                                <h2 class="text-lg font-semibold">Morning Breakfast</h2>
+                            </div>
+                            <div>
+                                <p class="text-[#D9253C] font-semibold">Rs.2,500</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap text-[#4F4F4F] mt-4 gap-1 pb-4">
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/fork-knife.png" alt="" class="h-[14px] w-[14px]">
+                                <p id="veg-NonVeg" class="text-sm">veg-NonVeg</p>
+                            </div>
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/delivery-scooter.png" alt="" class="h-[18px] w-[14px] object-contain">
+                                <p id="delivery-time" class="text-sm">12 Nov 2025, (02:20 - 03:00)PM</p>
+                            </div>
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/weekly.png" alt="" class="h-[14px] w-[18px] object-contain">
+                                <p id="weekly-plan" class="text-sm">Weekly Plan</p>
+                            </div>
+                        </div>
+
+                        <!-- plus/minus -->
+                        <div class="pt-2 pb-4 flex items-center gap-4 border-b border-[#36363633]">
+                            <div id="minus" class="bg-[#E6E6E6] rounded cursor-pointer">
+                                <img src="images/minus2.png" alt="" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div class="font-semibold">
+                                <p id="peopleCount">1</p>
+                            </div>
+                            <div id="plus" class="bg-[#E6E6E6] rounded border-[#363636] cursor-pointer">
+                                <img src="images/Plus2.png" alt="" class="w-full h-full object-contain p-1">
+                            </div>
+                        </div>
+
+                        <p class="text-sm font-semibold my-2">Preference</p>
+                        <p id="" class="text-sm text-[#6A6A6A]">I do not want any garlic and mushroom as I am allergic to both I do not want any garlic and...More</p>
+                        <hr class="hidden md:flex mt-2 border-[#36363633]">
+
+                        <div class="mt-4 md:mt-2 flex justify-between">
+                            <div class="flex -space-x-3">
+                                <img src="images/z-1.png" class="relative z-20 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                                <img src="images/z-2.png" class="relative z-30 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                                <img src="images/z-3.png" class="relative z-30 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                            </div>
+                            
+                            <div class="flex justify-center gap-2 items-center">
+                                <div class="border border-[#363636] rounded">
+                                    <p class="text-sm font-semibold px-2 py-2">Details</p>
+                                </div>
+                                <div class="bg-[#363636] rounded">
+                                    <p class="text-sm text-white font-medium px-2 py-2">Remove</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="border border-[#CBCBCB] rounded-lg p-4">
+                        <div class="flex justify-between">
+                            <div>
+                                <h2 class="text-lg font-semibold">Morning Breakfast</h2>
+                            </div>
+                            <div>
+                                <p class="text-[#D9253C] font-semibold">Rs.2,500</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap text-[#4F4F4F] mt-4 gap-1 pb-4">
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/fork-knife.png" alt="" class="h-[14px] w-[14px]">
+                                <p id="veg-NonVeg" class="text-sm">veg-NonVeg</p>
+                            </div>
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/delivery-scooter.png" alt="" class="h-[18px] w-[14px] object-contain">
+                                <p id="delivery-time" class="text-sm">12 Nov 2025, (02:20 - 03:00)PM</p>
+                            </div>
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/weekly.png" alt="" class="h-[14px] w-[18px] object-contain">
+                                <p id="weekly-plan" class="text-sm">Weekly Plan</p>
+                            </div>
+                        </div>
+
+                        <!-- plus/minus -->
+                        <div class="pt-2 pb-4 flex items-center gap-4 border-b border-[#36363633]">
+                            <div id="minus" class="bg-[#E6E6E6] rounded cursor-pointer">
+                                <img src="images/minus2.png" alt="" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div class="font-semibold">
+                                <p id="peopleCount">1</p>
+                            </div>
+                            <div id="plus" class="bg-[#E6E6E6] rounded border-[#363636] cursor-pointer">
+                                <img src="images/Plus2.png" alt="" class="w-full h-full object-contain p-1">
+                            </div>
+                        </div>
+
+                        <p class="text-sm font-semibold my-2">Preference</p>
+                        <p id="" class="text-sm text-[#6A6A6A]">I do not want any garlic and mushroom as I am allergic to both I do not want any garlic and...More</p>
+                        <hr class="hidden md:flex mt-2 border-[#36363633]">
+
+                        <div class="mt-4 md:mt-2 flex justify-between">
+                            <div class="flex -space-x-3">
+                                <img src="images/z-1.png" class="relative z-20 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                                <img src="images/z-2.png" class="relative z-30 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                                <img src="images/z-3.png" class="relative z-30 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                            </div>
+                            
+                            <div class="flex justify-center gap-2 items-center">
+                                <div class="border border-[#363636] rounded">
+                                    <p class="text-sm font-semibold px-2 py-2">Details</p>
+                                </div>
+                                <div class="bg-[#363636] rounded">
+                                    <p class="text-sm text-white font-medium px-2 py-2">Remove</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="border border-[#CBCBCB] rounded-lg p-4">
+                        <div class="flex justify-between">
+                            <div>
+                                <h2 class="text-lg font-semibold">Morning Breakfast</h2>
+                            </div>
+                            <div>
+                                <p class="text-[#D9253C] font-semibold">Rs.2,500</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap text-[#4F4F4F] mt-4 gap-1 pb-4">
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/fork-knife.png" alt="" class="h-[14px] w-[14px]">
+                                <p id="veg-NonVeg" class="text-sm">veg-NonVeg</p>
+                            </div>
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/delivery-scooter.png" alt="" class="h-[18px] w-[14px] object-contain">
+                                <p id="delivery-time" class="text-sm">12 Nov 2025, (02:20 - 03:00)PM</p>
+                            </div>
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/weekly.png" alt="" class="h-[14px] w-[18px] object-contain">
+                                <p id="weekly-plan" class="text-sm">Weekly Plan</p>
+                            </div>
+                        </div>
+
+                        <!-- plus/minus -->
+                        <div class="pt-2 pb-4 flex items-center gap-4 border-b border-[#36363633]">
+                            <div id="minus" class="bg-[#E6E6E6] rounded cursor-pointer">
+                                <img src="images/minus2.png" alt="" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div class="font-semibold">
+                                <p id="peopleCount">1</p>
+                            </div>
+                            <div id="plus" class="bg-[#E6E6E6] rounded border-[#363636] cursor-pointer">
+                                <img src="images/Plus2.png" alt="" class="w-full h-full object-contain p-1">
+                            </div>
+                        </div>
+
+                        <p class="text-sm font-semibold my-2">Preference</p>
+                        <p id="" class="text-sm text-[#6A6A6A]">I do not want any garlic and mushroom as I am allergic to both I do not want any garlic and...More</p>
+                        <hr class="hidden md:flex mt-2 border-[#36363633]">
+
+                        <div class="mt-4 md:mt-2 flex justify-between">
+                            <div class="flex -space-x-3">
+                                <img src="images/z-1.png" class="relative z-20 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                                <img src="images/z-2.png" class="relative z-30 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                                <img src="images/z-3.png" class="relative z-30 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                            </div>
+                            
+                            <div class="flex justify-center gap-2 items-center">
+                                <div class="border border-[#363636] rounded">
+                                    <p class="text-sm font-semibold px-2 py-2">Details</p>
+                                </div>
+                                <div class="bg-[#363636] rounded">
+                                    <p class="text-sm text-white font-medium px-2 py-2">Remove</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="border border-[#CBCBCB] rounded-lg p-4">
+                        <div class="flex justify-between">
+                            <div>
+                                <h2 class="text-lg font-semibold">Morning Breakfast</h2>
+                            </div>
+                            <div>
+                                <p class="text-[#D9253C] font-semibold">Rs.2,500</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap text-[#4F4F4F] mt-4 gap-1 pb-4">
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/fork-knife.png" alt="" class="h-[14px] w-[14px]">
+                                <p id="veg-NonVeg" class="text-sm">veg-NonVeg</p>
+                            </div>
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/delivery-scooter.png" alt="" class="h-[18px] w-[14px] object-contain">
+                                <p id="delivery-time" class="text-sm">12 Nov 2025, (02:20 - 03:00)PM</p>
+                            </div>
+                            <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                                <img src="images/weekly.png" alt="" class="h-[14px] w-[18px] object-contain">
+                                <p id="weekly-plan" class="text-sm">Weekly Plan</p>
+                            </div>
+                        </div>
+
+                        <!-- plus/minus -->
+                        <div class="pt-2 pb-4 flex items-center gap-4 border-b border-[#36363633]">
+                            <div id="minus" class="bg-[#E6E6E6] rounded cursor-pointer">
+                                <img src="images/minus2.png" alt="" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div class="font-semibold">
+                                <p id="peopleCount">1</p>
+                            </div>
+                            <div id="plus" class="bg-[#E6E6E6] rounded border-[#363636] cursor-pointer">
+                                <img src="images/Plus2.png" alt="" class="w-full h-full object-contain p-1">
+                            </div>
+                        </div>
+
+                        <p class="text-sm font-semibold my-2">Preference</p>
+                        <p id="" class="text-sm text-[#6A6A6A]">I do not want any garlic and mushroom as I am allergic to both I do not want any garlic and...More</p>
+                        <hr class="hidden md:flex mt-2 border-[#36363633]">
+
+                        <div class="mt-4 md:mt-2 flex justify-between">
+                            <div class="flex -space-x-3">
+                                <img src="images/z-1.png" class="relative z-20 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                                <img src="images/z-2.png" class="relative z-30 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                                <img src="images/z-3.png" class="relative z-30 w-12 h-12 rounded-full border border-white object-cover" alt="">
+                            </div>
+                            
+                            <div class="flex justify-center gap-2 items-center">
+                                <div class="border border-[#363636] rounded">
+                                    <p class="text-sm font-semibold px-2 py-2">Details</p>
+                                </div>
+                                <div class="bg-[#363636] rounded">
+                                    <p class="text-sm text-white font-medium px-2 py-2">Remove</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right -->
+                <div class="hidden md:block bg-[#F5F4EF] rounded p-4 h-[530px]">
+                    <h2 class="text-md md:text-xl font-semibold">Order summary</h2>
+                    <hr class="border-[#36363633] mt-1">
+                    <div class="mt-3 flex justify-between">
+                        <p class="text-md">Subtotal</p>
+                        <p id="" class="text-md">Rs.10,000</p>
+                    </div>
+                    <div class="mt-3 flex justify-between">
+                        <p class="text-md">Tax(13%)</p>
+                        <p id="" class="text-md">Rs.130</p>
+                    </div>
+                    <div class="mt-3 flex justify-between">
+                        <p class="text-md">Delivery Charge</p>
+                        <p id="" class="text-md">Rs.50</p>
+                    </div>
+                    <hr class="border-[#36363633] mt-1">
+                    <div class="mt-2 flex justify-between">
+                        <p class="text-lg text-[#D9253C] font-semibold">Total Cost</p>
+                        <p id="" class="text-lg text-[#D9253C] font-semibold">Rs.10,000</p>
+                    </div>
+
+                    <div class="mt-6 bg-[#FFFEF9] p-2">
+                        <div class="mt-2 flex flex-col">
+                            <label class="text-md font-semibold">Delivery Address</label>
+                            <select id="delivery-address" class="mt-2 bg-[#FFFEF9] border border-[#00000033] rounded p-3 text-ms text-[#363636]">
+                            <option>New Baneshwor, Kathmandu</option>
+                                <option>Kalimati, Kathmandu</option>
+                                <option>Patan, Lalitpur</option>
+                                <option>Thamel, Kathmandu</option>
+                            </select>
+                        </div>
+                        <div class="mt-2 flex flex-col">
+                            <label class="text-md font-semibold">Delivery Time</label>
+                            <select id="delivery-time" class="mt-2 bg-[#FFFEF9] border border-[#00000033] rounded p-3 text-ms text-[#363636]">
+                            <option>12 Nov 2025, (12:13 AM - 02:30 PM)</option>
+                            <option>12 Nov 2025, (12:13 AM - 02:30 PM)</option>
+                            <option>12 Nov 2025, (12:13 AM - 02:30 PM)</option>
+                            <option>12 Nov 2025, (12:13 AM - 02:30 PM)</option>                            
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- button -->
+                    <div class="mt-6 bg-[#d9253c] py-3 flex items-center justify-center rounded">
+                        <a href="#" class="text-md text-white font-medium">Proceed to Billing</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Right (Sticky Bottom) -->
+                <div class="md:hidden shadow-top fixed bottom-14 left-0 w-full bg-[#FFFEF9] z-40">
+                    <div class="flex justify-between items-stretch px-4 py-3 gap-3">
+                        <!-- Total Cost Box -->
+                        <div class="flex-1 border border-[#363636] rounded flex flex-col pl-2 py-1">
+                            <p class="text-[#6A6A6A] text-sm">Total Cost</p>
+                            <p class="total-cost text-sm font-semibold">Rs. 1,180</p>
+                        </div>
+
+                        <!-- Remove Meal Button -->
+                        <button class="remove-meal py-1 flex-1 bg-[#d9253c] text-white rounded flex flex-col tracking-wide justify-center items-center font-medium text-sm">
+                            Proceed to Billing
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- md footer -->
+    <section class="hidden md:block mt-16 md:mt-32">
+        <div class="bg-[#2B2B2B] ">
+            <div class="container mx-auto py-4 px-6 md:px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+                    <p class="text-sm text-white tracking-wide">© 2025 Office Khaja. All rights reserved</p>
+                <!-- Social -->
+                <div class="hidden md:flex md:ml-10">
+                    <div class="flex text-white space-x-4 text-xl">
+                        <a href="#" class=""><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class=""><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-[#FFFFFF] cursor-pointer"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- Mobile navigation -->
+    <section class="md:hidden">
+        <div class="flex items-center justify-center gap-8 py-2 fixed bottom-0 left-0 w-full bg-[#FFFEF9] z-40 border-t">
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./menu.html'">
+                <img src="images/ForkKnife.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Menu</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meal-details.html'">
+                <img src="images/Oven.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Meals</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./create-custom-meal.html'">
+                <img src="images/plus-create-menu.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Create Meal</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./orders-listing.html'">
+                <img src="images/ShoppingCart.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Orders</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-cart.html'">
+                <img src="images/ShoppingBagOpen-active.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#d9253c]">My Carts</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script/profile-dropdown.js"></script>
+</body>
+</html>

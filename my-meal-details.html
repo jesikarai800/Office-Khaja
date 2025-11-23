@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- NAV BAR -->
-    <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[52px] md:h-[96px] border-b border-[#36363633]">
+    <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[70px] md:h-[96px] border-b border-[#36363633] py-2 md:py-0">
         <div class="container mx-auto">
             <div class="flex justify-between items-center px-6 md:px-0">
                 <img src="images/Office Khaja Logo Red.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
@@ -20,33 +20,60 @@
                 <!-- Desktop Links -->
                 <div class="flex justify-center">
                     <ul class="hidden md:flex text-[#363636] text-md tracking-wide font-semibold gap-6 ml-14">
-                        <li><a href="#">Menus</a></li>
-                        <li><a href="#">Create Meal</a></li>
-                        <li><a href="#">My Meals</a></li>
-                        <li><a href="#">My Orders</a></li>
-                        <li><a href="#">My Cart</a></li>
+                        <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-9">Menus</a></li>
+                        <li><a href="./my-meal-details.html" class="border-b-4 border-[#d9253c] py-9">My Meals</a></li>
+                        <li><a href="./create-custom-meal.html" class="hover:border-b-4 border-[#d9253c] py-9">Create Meal</a></li>
+                        <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-9">My Orders</a></li>
+                        <li><a href="#" class="hover:border-b-4 border-[#d9253c] py-9">My Cart</a></li>
                     </ul>
                 </div>
 
-                <div id="custom-meal-profile" class="hidden md:flex items-center justify-end">
-                    <img src="images/custom-mean-profile.png" alt="" class="w-[64px] h-[64px] object-cover">
-                </div>
-
-                <!-- Hamburger -->
-                <div class="md:hidden">
-                    <button id="hamburger" class="space-y-[5px]" type="button">
-                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
-                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
-                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
-                    </button>
+                <!-- Profile Image -->
+                <div id="img-profile" class="relative flex items-center justify-end cursor-pointer">
+                    <img src="images/custom-mean-profile.png" 
+                        alt="" 
+                        class="w-[48px] h-[48px] md:w-[64px] md:h-[64px] object-cover rounded-full">
+                    
+                    <!-- Profile Dropdown -->
+                    <div id="profile" class="hidden absolute right-0 mt-[350px] w-64 bg-white border rounded-lg shadow-lg z-50">
+                        <div class="flex items-center gap-3 p-4 border-b border-gray-200">
+                            <img src="images/custom-mean-profile.png" class="w-12 h-12 rounded-full object-cover">
+                            <div class="flex flex-col">
+                                <p class="text-md font-semibold">Roshan Khadka</p>
+                                <p class="text-sm text-gray-500">+977 9863748652</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col p-4 space-y-3">
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/UserCircle.svg" class="w-6 h-6">
+                                <span class="text-md">My Profile</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/BellRinging.svg" class="w-6 h-6">
+                                <span class="text-md">Notification</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/SignOut.svg" class="w-6 h-6">
+                                <span class="text-md">Log Out</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>        
         </div>
     </nav>
 
-    <section class="pt-4 md:pt-12">
+    <section class="pt-4 md:pt-12 pb-48 md:pb-0 px-0">
         <div class="container mx-auto px-6 md:px-0">
             <h1 id="heading" class="text-xl md:text-4xl font-semibold">Morning Breakfast</h1>
+            <div class="flex items-center gap-4 mt-4">
+                <div>
+                    <p class="text-[#8A8A8A] text-lg">#Order-1234</p>
+                </div>
+                <div class="bg-[#FF8D28] flex justify-between items-center px-2 py-1 rounded">
+                    <p class="text-white text-sm">Pending</p>
+                </div>
+            </div>
 
             <!-- Meal Details -->
             <div class="flex flex-wrap text-[#4F4F4F] mt-8 gap-1">
@@ -71,18 +98,17 @@
                     <p id="weekly-plan" class="text-md">Weekly Plan</p>
                 </div>
             </div>
-
-
+    
             <hr class="mt-6">
 
-            <div class="mt-2 md:mt-12 grid md:grid-cols-[70%,30%] gap-6">
+            <div class="mt-2 md:mt-12 grid md:grid-cols-[68%,30%] gap-6">
                 <!-- Left Column -->
                 <div>
                     <p class="hidden md:flex text-xl font-semibold">Preference</p>
                     <p class="hidden md:flex mt-4 md:mt-4 text-sm text-[#6A6A6A] leading-relaxed">
                         "Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games. "Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games.</p>
-                    <!-- <hr class="md:hidden mt-2"> -->
-                    <div class="md:hidden border-b pb-3">
+                    
+                        <div class="md:hidden border-b pb-3">
                         <div id="toggleBtn" class="flex justify-between items-center cursor-pointer select-none">
                             <p class="font-semibold text-[#4F4F4F]">Meal preference</p>
                             <img id="icon"
@@ -93,10 +119,10 @@
                                 class="w-5 h-5 object-contain transition-all duration-300 cursor-pointer">
                         </div>
 
-                        <div id="redLine" class="h-[2px] bg-red-500 w-12 transition-all duration-300"></div>
-
+                        <div id="redLine" class="h-[2px] bg-red-500 w-12 transition-all duration-300">
+                        </div>
+                        
                         <p id="preview" class="text-sm text-[#6A6A6A] mt-2"></p>
-
                         <div id="fullContent"
                             class="text-sm text-[#6A6A6A] mt-2 overflow-hidden max-h-0 transition-all duration-300">
                         </div>
@@ -245,9 +271,9 @@
                             <div class="flex flex-col justify-between ml-4 flex-1">
                                 <div class="flex justify-between">
                                     <div>
-                                    <p class="item-name font-semibold text-md sm:text-xl text-[#363636]">Mustang Aloo</p>
+                                    <p class="item-name font-semibold text-md sm:text-xl text-[#363636]">Mustang Aloo 7</p>
                                     </div>
-                                    <div class="item-price ml-4 text-md sm:text-xl font-semibold text-[#363636]">Rs.345</div>
+                                    <div class="item-price ml-4 text-md sm:text-xl font-semibold text-[#363636]">Rs.905</div>
                                 </div>
                                 <p class="text-sm text-[#6A6A6A] mt-1">with freshly prepared something something sauce</p>
                                 <div class="flex text-[#6A6A6A] items-center">
@@ -263,28 +289,52 @@
                         </label>
                     </div>
                 </div>
+                <!-- Right Side -->
+                <div class="hidden md:block bg-[#3636360D] rounded-md h-[350px]">
+                    <div class="p-6 flex flex-col h-full">
+                        <p class="text-xl font-semibold border-b border-[#36363633] py-2">Meal Summary</p>
 
-                <!-- Right Column -->
-                <div class="bg-[#3636360D] rounded-md h-[350px]">
-                    <div class="p-6">
-                        <p class="text-xl font-semibold border-b border-[#36363633] py-2">Meal summary</p>
-                        <div class="flex justify-between border-b border-[#36363633] py-2 mb-2">
-                            <p id="items-name-box" class="text-md">Mustang Aloo</p>
-                            <p id="total-box" class="text-md">Rs.345</p>
+                        <!-- Items List -->
+                        <div class="flex-1 mt-2 overflow-y-auto scrollbar-hide">
+                            <div class="flex justify-between border-b border-[#36363633] py-2">
+                                <p class="text-md" id="items-name-box">Mustang Aloo</p>
+                                <p class="text-md" id="total-box">Rs.345</p>
+                            </div>
                         </div>
+
+                        <!-- Total Cost -->
                         <div class="mt-2 flex justify-between">
-                            <p class="text-md text-[#d9253c] font-semibold">Total Cost</p>
-                            <p id="total-cost" class="text-md text-[#d9253c] font-semibold">Rs.1,180</p>
+                        <p class="text-md text-[#d9253c] font-semibold">Total Cost</p>
+                        <p class="total-cost text-md text-[#d9253c] font-semibold">Rs.1,180</p>
                         </div>
-                        <div class="mt-6 bg-[#363636] flex items-center justify-center rounded py-3">
-                            <a href="#" class="text-white text-xs font-semibold">Add to Cart</a>
+
+                        <!-- Remove Meal Button -->
+                        <div class="remove-meal mt-6 bg-[#363636] flex items-center justify-center rounded py-3">
+                        <a href="#" class="text-white text-sm font-semibold">Remove Meal</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Mobile Right (Sticky Bottom) -->
+                <div class="md:hidden fixed bottom-14 left-0 w-full bg-[#FFFEF9] z-40">
+                    <div class="flex justify-between items-stretch px-4 py-3 gap-3">
+                        <!-- Total Cost Box -->
+                        <div class="flex-1 border border-[#363636] rounded flex flex-col px-2 py-1">
+                            <p class="text-[#6A6A6A] text-sm">Total Cost</p>
+                            <p class="total-cost text-sm font-semibold">Rs. 1,180</p>
+                        </div>
+
+                        <!-- Remove Meal Button -->
+                        <button class="remove-meal py-1 flex-1 bg-[#363636] text-white rounded flex flex-col justify-center items-center font-medium text-sm">
+                            Remove Meal
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <div class="mt-16 bg-[#2B2B2B] ">
+        <div class="hidden md:block mb-20 md:mb-0 mt-16 bg-[#2B2B2B] px-0 md:px-4">
             <div class="container mx-auto py-4 px-6 md:px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                     <p class="text-sm text-white font-normal">© 2025 Office Khaja. All Rights Reserved</p>
                 <!-- Social -->
@@ -299,100 +349,37 @@
         </div> 
     </section>
 
-    
+    <section class="md:hidden">
+        <div class="flex items-center justify-center gap-8 py-2 fixed bottom-0 left-0 w-full bg-[#FFFEF9] z-40 border-t">
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./menu.html'">
+                <img src="images/ForkKnife.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Menu</p>
+            </div>
 
-<script>
-const labels = document.querySelectorAll("label");
-const totalCost = document.getElementById("total-cost");
-const itemsCount = document.getElementById("itemCount");
-const itemsNameBox = document.getElementById("items-name-box");
-const totalBox = document.getElementById("total-box");
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meal-details.html'">
+                <img src="images/Oven.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Meals</p>
+            </div>
 
-const itemData = Array.from(labels).map(label => {
-    const name = label.querySelector(".item-name")?.textContent.trim();
-    const priceText = label.querySelector(".item-price")?.textContent.trim();
-    const price = parseInt(priceText.replace(/[^0-9]/g, ""));
-    return { name, price };
-});
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./create-custom-meal.html'">
+                <img src="images/plus-create-menu.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Create Meal</p>
+            </div>
 
-function updateContent() {
-    let total = 0;
-    let count = 0;
-    let selectedItems = "";
-    let selectedTotal = "";
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./orders-listing.html'">
+                <img src="images/ShoppingCart-active.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#d9253c]">My Orders</p>
+            </div>
 
-    labels.forEach((label, index) => {
-        if (label.classList.contains("selected")) {
-            count++;
-            total += itemData[index].price;
-            selectedItems += `<p class="mb-2">${itemData[index].name}</p>`;
-            selectedTotal += `<p class="mb-2">Rs. ${itemData[index].price}</p>`;
-        }
-    });
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-cart.html'">
+                <img src="images/ShoppingBagOpen.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Carts</p>
+            </div>
+        </div>
+    </section>
 
-    itemsNameBox.innerHTML = selectedItems || "<p>No items selected</p>";
-    totalBox.innerHTML = selectedTotal || "<p>Rs. 0</p>";
-    totalCost.textContent = `Rs. ${total.toLocaleString()}`;
-    itemsCount.textContent = `${count} item${count !== 1 ? "s" : ""}`;
-}
-
-labels.forEach(label => {
-    label.addEventListener("click", () => {
-        label.classList.toggle("selected");
-        updateContent();
-    });
-});
-
-updateContent();
-</script>
-
-<script>
-const userPreference =
-    "I do not want any garlic and mushroom as I am allergic to both, and avoid peanuts, soy, and onions as well.";
-
-const preview = document.getElementById("preview");
-const fullContent = document.getElementById("fullContent");
-const btn = document.getElementById("toggleBtn");
-const icon = document.getElementById("icon");
-const redLine = document.getElementById("redLine");
-
-// Set text
-fullContent.textContent = userPreference;
-
-preview.textContent =
-    userPreference.length > 60
-        ? userPreference.substring(0, 60) + "…"
-        : userPreference;
-
-let isOpen = false;
-
-btn.addEventListener("click", () => {
-    isOpen = !isOpen;
-
-    if (isOpen) {
-        // OPEN
-        fullContent.style.maxHeight = fullContent.scrollHeight + "px";
-        preview.classList.add("hidden");
-
-        // Switch image to minus
-        icon.src ="images/Minus.png";
-
-        redLine.classList.remove("w-12");
-        redLine.classList.add("w-24");
-    } else {
-        // CLOSE
-        fullContent.style.maxHeight = "0px";
-        preview.classList.remove("hidden");
-
-        // Switch image to plus
-        icon.src = "images/plus.png";
-
-        redLine.classList.remove("w-24");
-        redLine.classList.add("w-12");
-    }
-});
-
-</script>
+<script src="script/my-meal-details.js"></script>
+<script src="script/profile-dropdown.js"></script>
 
 </body>
 </html>

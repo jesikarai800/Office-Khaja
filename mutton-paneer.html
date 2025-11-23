@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- NAV BAR -->
-    <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[52px] md:h-[96px] md:border-b border-[#36363633]">
+    <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[70px] md:h-[96px] border-b border-[#36363633] py-2 md:py-0">
         <div class="container mx-auto">
             <div class="flex justify-between items-center px-6 md:px-0">
                 <img src="images/Office Khaja Logo Red.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
@@ -20,11 +20,11 @@
                 <!-- Desktop Links -->
                 <div class="flex justify-center">
                     <ul class="hidden md:flex text-[#363636] text-base tracking-wide font-semibold gap-6 ml-14">
-                        <li class=""><a href="#"> Menus</a></li>
+                        <li class=""><a href="#">Menus</a></li>
                         <li class=""><a href="#" class="border-b-4 border-[#d9253c] py-9"> Create Meal</a></li>
-                        <li class=""><a href="#"> My Meals</a></li>
-                        <li class=""><a href="#"> My Orders</a></li>
-                        <li class=""><a href="#">My Cart    </a></li>
+                        <li class=""><a href="#">My Meals</a></li>
+                        <li class=""><a href="#">My Orders</a></li>
+                        <li class=""><a href="#">My Cart</a></li>
                     </ul>
                 </div>
 
@@ -46,17 +46,53 @@
     </nav>
 
     <!-- Body Content -->
-     <section class="pt-16">
+     <section class="pt-6 d:pt-12 px-6 md:px-4">
         <div class="container mx-auto">
-            <div class="grid grid-cols-[40%,60%]">
-                <div class="">
+            <div class="grid grid-cols-1 md:grid-cols-[40%,60%]">
+                <div class="hidden md:flex">
                     <img src="images/mutton-panner.jpg" alt="" class="h-[400px] w-[400px] object-cover rounded-lg">
                 </div>
-                <div class="-ml-20 text-[#363636]">
-                    <h2 class="text-[32px] font-semibold">Mutton Paneer</h2>
+                <div class="md:-ml-20 text-[#363636]">
+                    <h2 class="text-2xl md:text-4xl font-semibold">Mutton Paneer</h2>
                     <p class="text-sm mt-1">with freshly prepared something something sauce </p>
+                    
+                    <!-- Mobile Img -->
+                    <img src="images/mutton-panner.jpg" alt="" class="md:hidden mt-6 h-[270] w-full object-cover rounded-lg">
 
-                    <div class="py-2">
+                    <!-- Mobile Nutrition Block -->
+                    <div class="md:hidden block py-4">
+                        <hr class="border-[#36363633]">
+                        <div class="grid grid-cols-4 gap-4 text-center py-4 text-sm">
+                            <div>
+                                <p class="font-semibold">Type</p><p>Veg</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Energy</p><p>564 Kcal</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Weight</p><p>256 g</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Protein</p><p>25 g</p>
+                            </div>
+                        </div>
+                        <hr class="border-[#36363633]">
+                        <div class="grid grid-cols-4 gap-4 text-center py-4 text-sm">
+                            <div>
+                                <p class="font-semibold">Carbs</p><p>23 g</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Fats</p><p>23 g</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Sugar</p><p>23 g</p>
+                            </div>
+                        </div>
+                        <hr class="border-[#36363633]">
+                    </div>
+
+                    <!-- Desktop Nutrition Block -->
+                    <div class="hidden md:block mt-2 py-2">
                         <hr class="border-[#ABABAB] mr-48">
                         <div class="flex py-2 items-center">
                             <div class="flex flex-col">
@@ -97,29 +133,29 @@
                         <hr class="border-[#ABABAB] mr-48">
                     </div>
                     
-                    <!-- Ingredients -->
-                     <div class="py-4">
+                    <!-- Desktop Ingredients -->
+                     <div class="hidden md:block py-4">
                         <p class="text-lg font-semibold">Ingredients</p>    
 
-                        <ul class="flex gap-44 text-sm list-disc marker:text-xs marker:text-[#D9253C] pl-5 py-1 mt-2 border-t border-[#ABABAB]">
+                        <ul class="flex gap-44 text-sm list-disc marker:text-xs marker:text-[#D9253C] pl-5 py-2 mt-2 border-t border-[#ABABAB]">
                             <li>Ingredients</li>
                             <li>Ingredients</li>
                             <li>Ingredients</li>
                         </ul>
 
-                        <ul class="flex gap-44 text-sm list-disc marker:text-xs marker:text-[#D9253C] pl-5 py-1 mt-2 border-t border-[#ABABAB]">
+                        <ul class="flex gap-44 text-sm list-disc marker:text-xs marker:text-[#D9253C] pl-5 py-2 mt-2 border-t border-[#ABABAB]">
                             <li>Ingredients</li>
                             <li>Ingredients</li>
                             <li>Ingredients</li>
                         </ul>
                         
-                        <ul class="flex gap-44 text-sm list-disc marker:text-xs marker:text-[#D9253C] pl-5 py-1 mt-2 border-t border-[#ABABAB]">
+                        <ul class="flex gap-44 text-sm list-disc marker:text-xs marker:text-[#D9253C] pl-5 py-2 mt-2 border-t border-[#ABABAB]">
                             <li>Ingredients</li>
                             <li>Ingredients</li>
                             <li>Ingredients</li>
                         </ul>
                         
-                        <ul class="flex gap-44 text-sm list-disc marker:text-xs marker:text-[#D9253C] pl-5 py-1 mt-2 border-t border-[#ABABAB]">
+                        <ul class="flex gap-44 text-sm list-disc marker:text-xs marker:text-[#D9253C] pl-5 py-2 mt-2 border-t border-[#ABABAB]">
                             <li>Ingredients</li>
                             <li>Ingredients</li>
                         </ul>
@@ -128,29 +164,62 @@
             </div>
 
 
-                                        <!-- How many people will be eating -->
-                            <div class="py-4">
-                                <p class="text-md text-[#6A6A6A]">Quantity</p>
-                                
-                                <div class="mt-4 flex items-center gap-6">
-                                    <div id="minus" class="bg-[#E6E6E6] rounded cursor-pointer">
-                                        <img src="images/minus2.png" alt="" class="w-full h-full object-contain px-2 py-2 text-[#CBCBCB]">
-                                    </div>
-                                    <div class="font-semibold">
-                                        <p id="peopleCount">1</p>
-                                    </div>
-                                    <div id="plus" class="bg-[#E6E6E6] rounded border-[#363636] cursor-pointer">
-                                        <img src="images/plus2.png" alt="" class="w-full h-full object-contain px-2 py-2">
-                                    </div>
-                                </div>
-                            </div>
+            <!-- How many people will be eating -->
+            <div class="py-4">
+                <p class="text-md text-[#6A6A6A]">Quantity</p>
+                
+                <div class="mt-4 flex items-center gap-6">
+                    <div id="minus" class="bg-[#E6E6E6] rounded cursor-pointer">
+                        <img src="images/minus2.png" alt="" class="w-full h-full object-contain px-2 py-2 text-[#CBCBCB]">
+                    </div>
+                    <div class="font-semibold">
+                        <p id="peopleCount">1</p>
+                    </div>
+                    <div id="plus" class="bg-[#E6E6E6] rounded border-[#363636] cursor-pointer">
+                        <img src="images/plus2.png" alt="" class="w-full h-full object-contain px-2 py-2">
+                    </div>
+                </div>
+            </div>
 
-                            <div class="py-6">
-                                <a class="py-3 px-6 bg-[#d9253c] rounded text-md text-white font-semibold">Add to Cart</a>
-                            </div>
+            <div class="py-6">
+                <a class="py-3 px-6 bg-[#d9253c] rounded text-md text-white font-semibold">Add to Cart</a>
+            </div>
 
-                            <p class="mt-4 text-sm text-[#6A6A6A] leading-relaxed mr-80">"Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games. "Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games. </p>
+            <p class="hidden md:flex mt-4 text-sm text-[#6A6A6A] leading-relaxed mr-80">"Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games. "Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games. </p>
+            
+            <!-- Mobile Ingredients -->
+            <div class="md:hidden mt-6 pb-24">
+                <p class="text-lg font-semibold">Ingredients</p>
+
+                <div class="grid grid-cols-2 gap-x-8 text-sm list-disc pl-5 mt-2">
+                    <ul class="space-y-2 list-disc marker:text-xs marker:text-[#D9253C]">
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                    </ul>
+
+                    <ul class="space-y-2 list-disc marker:text-xs marker:text-[#D9253C]">
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                        <li>Ingredients</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="hidden md:block">
         <div class="mt-16 bg-[#2B2B2B] ">
             <div class="container mx-auto py-4 px-6 md:px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                     <p class="text-sm text-white font-normal tracking-wide">© 2025 Office Khaja. All rights reserved</p>
@@ -160,10 +229,46 @@
                         <a href="#" class=""><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class=""><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-youtube text-[#FFFFFF] cursor-pointer"></i></a>
-                </div>
+                    </div>
                 </div>
             </div>
         </div> 
-     </section>
+    </section>
+
+    <!-- Mobile nav -->
+    <section class="md:hidden">
+        <div class="flex items-center justify-center gap-8 py-2 fixed bottom-0 left-0 w-full bg-[#FFFEF9] z-40 border-t">
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./menu.html'">
+                <img src="images/ForkKnife-active.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#d9253c]">Menu</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meal-details.html'">
+                <img src="images/Oven.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Meals</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./create-custom-meal.html'">
+                <img src="images/plus-create-menu.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Create Meal</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./orders-listing.html'">
+                <img src="images/ShoppingCart.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Orders</p>
+            </div>
+
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-cart.html'">
+                <img src="images/ShoppingBagOpen.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
+                <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Carts</p>
+            </div>
+        </div>
+    </section>
+
+<script src="script/profile-dropdown.js"></script>
 </body>
 </html>
+
+
+
+
