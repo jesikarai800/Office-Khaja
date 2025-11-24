@@ -19,34 +19,51 @@
 
                 <!-- Desktop Links -->
                 <div class="flex justify-center">
-                    <ul class="hidden md:flex text-[#363636] text-base tracking-wide font-semibold gap-6 ml-14">
-                        <li class=""><a href="#">Menus</a></li>
-                        <li class=""><a href="#" class="border-b-4 border-[#d9253c] py-9"> Create Meal</a></li>
-                        <li class=""><a href="#">My Meals</a></li>
-                        <li class=""><a href="#">My Orders</a></li>
-                        <li class=""><a href="#">My Cart</a></li>
+                    <ul class="hidden md:flex text-[#363636] text-md tracking-wide font-semibold gap-6 ml-14">
+                        <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-9">Menus</a></li>
+                        <li><a href="./my-meal-details.html" class="hover:border-b-4 border-[#d9253c] py-9">My Meals</a></li>
+                        <li><a href="./create-custom-meal.html" class="hover:border-b-4 border-[#d9253c] py-9">Create Meal</a></li>
+                        <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-9">My Orders</a></li>
+                        <li><a href="./my-cart.html" class="hover:border-b-4 border-[#d9253c] py-9">My Cart</a></li>
                     </ul>
                 </div>
 
-                <div id="custom-meal-profile" class="hidden md:flex flex items-center justify-end">
-                    <img src="images/custom-mean-profile.png" alt="" class="w-[64px] h-[64px] object-cover">
+                <!-- Profile Image -->
+                <div id="img-profile" class="relative flex items-center justify-end cursor-pointer">
+                    <img src="images/custom-mean-profile.png" 
+                        alt="" 
+                        class="w-[48px] h-[48px] md:w-[64px] md:h-[64px] object-cover rounded-full">
+                    
+                    <!-- Profile Dropdown -->
+                    <div id="profile" class="hidden absolute right-0 mt-[350px] w-64 bg-white border rounded-lg shadow-lg z-50">
+                        <div class="flex items-center gap-3 p-4 border-b border-gray-200">
+                            <img src="images/custom-mean-profile.png" class="w-12 h-12 rounded-full object-cover">
+                            <div class="flex flex-col">
+                                <p class="text-md font-semibold">Roshan Khadka</p>
+                                <p class="text-sm text-gray-500">+977 9863748652</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col p-4 space-y-3">
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/UserCircle.svg" class="w-6 h-6">
+                                <span class="text-md">My Profile</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/BellRinging.svg" class="w-6 h-6">
+                                <span class="text-md">Notification</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                                <img src="images/SignOut.svg" class="w-6 h-6">
+                                <span class="text-md">Log Out</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Hamburger -->
-                <div class="md:hidden">
-                    <button id="hamburger" class="space-y-[5px] md:hidden" type="button">
-                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
-                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
-                        <span class="line block rounded-lg w-[22px] h-[2px] bg-[#363636]"></span>
-                    </button>
-                </div>
-
             </div>        
         </div>
     </nav>
-
     <!-- Body Content -->
-     <section class="pt-6 d:pt-12 px-6 md:px-4">
+    <section class="pt-6 m d:pt-12 px-6 md:px-4">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-[40%,60%]">
                 <div class="hidden md:flex">

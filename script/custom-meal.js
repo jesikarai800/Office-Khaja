@@ -222,18 +222,18 @@ notesInput.addEventListener('input', () => {
 });
 
 
-// MOBILE STEPS and Progress Bars
+// STEPS and Progress Bars mobile
 const mobileSteps = document.querySelectorAll('#mobile-steps .mobile-step-link');
 const mobileProgressLine = document.getElementById('mobile-progress-line');
 
 mobileSteps.forEach(btn => {
   btn.addEventListener('click', () => {
     mobileSteps.forEach(b => {
-      b.textContent = b.dataset.step;
+      b.textContent = b.dataset.label;
       b.classList.remove('text-[#363636]');
     });
 
-    btn.textContent = `${btn.dataset.step}. ${btn.dataset.label}`;
+    btn.textContent = `${btn.dataset.label}`;
     btn.classList.add('text-[#363636]');
 
     const firstRect = mobileSteps[0].getBoundingClientRect();
@@ -276,7 +276,7 @@ const heading = document.getElementById("heading");
 // Map step numbers to heading text
 const stepHeadings = {
     1: "Set your meal preferences",
-    2: "Create custom meal",
+    2: "Add meal items",
     3: "Choose your delivery time",
 };
 

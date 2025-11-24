@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/css/icofont.min.css">
+</head>
+<body>
+    <section class="pt-12 bg-[#FFFEF9]">
+        <div class="container mx-auto w-[370px] h-[342px] border-2 rounded-lg p-6">
+            <div>
+                <h2 class="text-2xl font-semibold">Reorder This Meal?</h2>
+            </div>
+            <div class="mt-6">
+                <p class="text-sm text-[#6A6A6A] tracking-wide">You are about to reorder
+                    <span class="font-semibold text-[#363636]">Morning Lunch </span>
+                    <span>(#Order-1234)</span> with your previously saved details.</p>
+            </div>
+
+            <div class="flex flex-wrap text-[#4F4F4F] mt-4 gap-1">
+                <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                    <img src="images/fork-knife.png" alt="" class="h-[14px] w-[14px]">
+                    <p id="veg-NonVeg" class="text-sm">veg-NonVeg</p>
+                </div>
+                <div class="flex items-center space-x-1 border border-[#36363633] rounded p-1 ">
+                    <img src="images/serving.png" alt="" class="h-[16px] w-[16px] object-contain">
+                    <p id="no-of-servings" class="text-sm">5 Servings</p>
+                </div>
+            </div>
+
+            <!-- Total Price -->
+            <div class="mt-6 flex items-center">
+                <p class="text-md font-semibold">Total Price :</p>
+                <span class="text-lg text-[#d9253c] font-semibold ml-2">Rs.2,500</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-6 grid grid-cols-2 gap-4">
+                <button class="border border-[#363636] py-2 w-full text-center rounded">
+                    <p class="text-md font-semibold">Cancel</p>
+                </button>
+                <button class="bg-[#363636] py-2 w-full text-center rounded">
+                    <p class="text-white font-medium">Yes, Add to Cart</p>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

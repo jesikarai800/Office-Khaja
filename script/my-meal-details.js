@@ -24,7 +24,7 @@ function updateContent() {
       total += itemData[index].price;
       selectedItems += `<p class="mb-2">${itemData[index].name}</p>`;
       selectedTotal += `<p class="mb-2">Rs. ${itemData[index].price}</p>`;
-    }
+    } 
   });
 
   itemsNameBox.innerHTML = selectedItems || "<p>No items selected</p>";
@@ -80,7 +80,7 @@ btn.addEventListener("click", () => {
     fullContent.style.maxHeight = "0px";
     preview.classList.remove("hidden");
 
-    icon.src = "images/plus.png";
+    icon.src = "images/downward-arrow.svg";
 
     redLine.classList.remove("w-24");
     redLine.classList.add("w-12");

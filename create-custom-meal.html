@@ -17,16 +17,18 @@
     <nav class="bg-[#FFFEF9] sticky top-0 z-40 h-[70px] md:h-[96px] border-b border-[#36363633] py-2 md:py-0">
         <div class="container mx-auto">
             <div class="flex justify-between items-center px-6 md:px-0">
-                <img src="images/Office Khaja Logo Red.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
+                <a href="./index.html">
+                    <img src="images/Office Khaja Logo Red.svg" alt="officekhaja logo" class="h-[52px] md:h-[90px] md:w-[90px] w-auto object-contain">
+                </a>
 
                 <!-- Desktop Links -->
                 <div class="flex justify-center">
                     <ul class="hidden md:flex text-[#363636] text-md tracking-wide font-semibold gap-6 ml-14">
                         <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-9">Menus</a></li>
-                        <li><a href="./my-meal-details.html" class="hover:border-b-4 border-[#d9253c] py-9">My Meals</a></li>
+                        <li><a href="./my-meals.html" class="hover:border-b-4 border-[#d9253c] py-9">My Meals</a></li>
                         <li><a href="./create-custom-meal.html" class="border-b-4 border-[#d9253c] py-9">Create Meal</a></li>
                         <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-9">My Orders</a></li>
-                        <li><a href="#" class="hover:border-b-4 border-[#d9253c] py-9">My Cart</a></li>
+                        <li><a href="./my-cart.html" class="hover:border-b-4 border-[#d9253c] py-9">My Cart</a></li>
                     </ul>
                 </div>
 
@@ -46,7 +48,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col p-4 space-y-3">
-                            <a href="#" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
+                            <a href="./complete-your-profile.html" class="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2">
                                 <img src="images/UserCircle.svg" class="w-6 h-6">
                                 <span class="text-md">My Profile</span>
                             </a>
@@ -66,27 +68,24 @@
     </nav>
 
     <!-- CUSTOM MEAL CONTENT -->
-    <section id="main-section" class="pt-4 pb-48 md:pb-0 md:pt-12 px-6 md:px-4">
+    <section id="main-section" class="pt-6 pb-48 md:pb-0 md:pt-12 px-6 md:px-4">
         <div class="container mx-auto">
-            <div class="grid md:grid-cols-[60%,40%] ">
+            <div class="grid md:grid-cols-[60%,40%]">
                 <div class="">
                     <div class="relative">
-                        <h1 id="heading" class="text-xl md:text-4xl font-semibold">Set your meal preferences</h1>
+                        <h1 id="heading" class="text-2xl md:text-4xl font-semibold">Set your meal preferences</h1>
 
                         <ul id="steps" class="hidden md:flex py-2 pt-12 flex md:flex-row text-[#8A8A8A] text-sm font-medium border-b border-[#36363633] mr-3">
                             <li><a href="#" class="step-link px-24 py-2 text-[#363636] cursor-pointer" data-step="1">STEP1</a></li>
-                            <li><a href="#" class="step-link px-32 py-2" data-step="2">STEP2</a></li>
+                            <li><a href="#" class="step-link px-32 py-2" data-step="2">STEP2</a ></li>
                             <li><a href="#" class="step-link px-24 py-2" data-step="3">STEP3</a></li>
                         </ul>
 
                         <!-- MOBILE VERSION -->
-                        <ul id="mobile-steps" class="md:hidden flex justify-between justify-center gap-4 pt-4 text-[#8A8A8A] text-sm font-medium border-b border-[#36363633]">
-                            <li><button class="mobile-step-link px-3 py-2 " data-step="1" data-label="Meal"></button></li>
-                            <li><button class="mobile-step-link px-3 py-2 "data-step="2" data-label="Items"></button></li>
-                            <li><button class="mobile-step-link px-3 py-2 " data-step="3" data-label="Delivery Time"></button></li>
-                            <!-- <li><button class="mobile-step-link px-3 py-2 " data-step="4" data-label="Step 3"></button></li> -->
-                            <!-- <li><button class="mobile-step-link px-3 py-2 " data-step="5" data-label="Checkout"></button></li>
-                            <li><button class="mobile-step-link px-3 py-2 " data-step="6" data-label="Bill"></button></li> -->
+                        <ul id="mobile-steps" class="md:hidden flex justify-between justify-center gap-4 mt-6 text-sm font-semibold border-b border-[#36363633]">
+                            <li><button class="mobile-step-link px-3 py-2 " data-step="1" data-label="STEP 1"></button></li>
+                            <li><button class="mobile-step-link px-3 py-2 "data-step="2" data-label="STEP 2"></button></li>
+                            <li><button class="mobile-step-link px-3 py-2 " data-step="3" data-label="STEP 3"></button></li>
                         </ul>
 
                         <!-- Black progress underline -->
@@ -97,22 +96,36 @@
                     </div>
 
                     <!-- Step Content -->
-                    <div id="step-contents" class="px-0 md:px-4 py-4 mt-6">
+                    <div id="step-contents" class="px-0 md:px-4 py-4 mt-4">
                         
                         <!-- STEP 1 -->
                         <div id="step1" class="step-section text-[#363636]">
-                            <p class="text-md md:text-xl font-medium">Are you veg or non-veg?</p>
+                            <p class="text-[20px] md:text-xl font-semibold">Are you veg or non-veg?</p>
                             <!-- veg or non-veg -->
-                            <div id="veg-options" class="flex mt-6 mb-8 gap-4">
-                                <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
-                                    <p class="option text-md px-2 md:px-14 py-2">Veg</p>
+                            <div id="veg-options" class="flex mt-6 ">
+                                <div class="hidden md:flex mb-8 gap-4">
+                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
+                                        <p class="option text-md px-2 md:px-14 py-2">Veg</p>
+                                    </div>
+                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
+                                        <p class="option text-md px-2 md:px-10 py-2">Non-Veg</p>
+                                    </div>
+                                    <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
+                                        <p class="option text-md px-2 md:px-4 py-2">Veg & Non-veg</p>
+                                    </div>
                                 </div>
-                                <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
-                                    <p class="option text-md px-2 md:px-10 py-2">Non-Veg</p>
+                            </div>
+                            <div>
+                                <!-- Mobile Select (sm only) -->
+                                <div class="md:hidden mb-8">
+                                    <select class="bg-[#FFFEF9] w-full border border-[#ABABAB] rounded py-2 px-2 text-md cursor-pointer">
+                                        <option value="">Select meal preference</option>
+                                        <option value="veg" class="option">Veg</option>
+                                        <option value="nonveg" class="option">Non-Veg</option>
+                                        <option value="both" class="option">Veg & Non-Veg</option>
+                                    </select>
                                 </div>
-                                <div class="option border-2 border-[#ABABAB] rounded hover:border-[#363636] cursor-pointer">
-                                    <p class="option text-md px-2 md:px-4 py-2">Veg & Non-veg</p>
-                                </div>
+
                             </div>
 
                             <!-- which meal you want to order -->
@@ -140,7 +153,7 @@
                                 </div>
 
                                 <div class="md:hidden flex flex-col mt-4">
-                                    <select id="" class="bg-[#FFFEF9] border border-[#ABABAB] rounded p-2 text-sm text-[#363636]">
+                                    <select id="" class="bg-[#FFFEF9] border border-[#ABABAB] rounded p-2 text-md text-[#363636]">
                                     <option disabled selected>Choose meal type</option>
                                     <option>Morning Breakfast</option>
                                     <option>Morning Lunch</option>
@@ -181,16 +194,24 @@
                             </div>
 
                             <!-- next button -->
-                            <button class="next-button bg-[#D9253C] px-8 py-3 flex justify-center rounded cursor-pointer mt-12">
+                            <button class="hidden md:flex next-button bg-[#D9253C] px-8 py-3 flex justify-center rounded cursor-pointer mt-12">
                                 <p class="text-sm text-white font-medium">Next Step</p>
                             </button>
+
+                            <!-- Mobile / sm only -->
+                            <div class="bg-[#FFFEF9] shadow-top fixed bottom-14 left-0 w-full z-40 md:hidden px-4 py-2">
+                                <div class="next-button bg-[#D9253C] px-4 py-3 flex justify-center rounded cursor-pointer">
+                                    <p class="text-sm text-white font-medium">Next Step</p>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- STEP 2 -->
                         <div id="step2" class="step-section hidden">
-                            <p class="text-md md:text-xl font-medium">Which items do you want to add to to meal?</p>
+                            <p class="text-[20px] md:text-xl font-semibold">Which items do you want to add to meal?</p>
 
-                            <div class="mt-4">
+                            <!-- Desktop View -->
+                            <div class="hidden md:flex flex-col mt-4">
                                 <p id="itemCount" class="text-sm font-medium text-[#6A6A6A] mb-2">0 items selected</p>
 
                                 <!-- label 1 -->
@@ -404,23 +425,215 @@
                                 </label>
 
                             </div>
+                            
+                            <!-- Mobile View -->
+                             <div class="md:hidden mt-6 flex flex-col gap-4">
+                                <!-- label 1 -->
+                                <label class="relative md:static flex cursor-pointer border border-[#00000033] rounded py-4 px-4">
+                                    <div class="flex space-x-4">
+                                        <div>
+                                            <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-16  w-20 object-contain rounded">
+                                        </div>
+
+                                        <div class="space-y-2">
+                                            <div class="grid grid-cols-[70%,30%] text-md">
+                                                <div class="space-y-2">
+                                                    <p class="font-semibold">Mustang Aloo</p>
+                                                    <p class="text-sm text-[#6A6A6A] tracking-wide">with freshly prepared something something sauce </p>
+                                                    <div class="flex text-[#6A6A6A] items-center">
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium pr-2">678 kcal</p>
+                                                        </div>
+                                                        <div class="h-2 border-l border-gray-400"></div>
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium px-2">250 g</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div>
+                                                    <p class="font-semibold">Rs.345</p>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+
+                                </label>
+                                <!-- label 2 -->
+                                <label class="relative md:static flex cursor-pointer border border-[#00000033] rounded py-4 px-4">
+                                    <div class="flex space-x-4">
+                                        <div>
+                                            <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-16  w-20 object-contain rounded">
+                                        </div>
+
+                                        <div class="space-y-2">
+                                            <div class="grid grid-cols-[70%,30%] text-md">
+                                                <div class="space-y-2">
+                                                    <p class="font-semibold">Mustang Aloo</p>
+                                                    <p class="text-sm text-[#6A6A6A] tracking-wide">with freshly prepared something something sauce </p>
+                                                    <div class="flex text-[#6A6A6A] items-center">
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium pr-2">678 kcal</p>
+                                                        </div>
+                                                        <div class="h-2 border-l border-gray-400"></div>
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium px-2">250 g</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div>
+                                                    <p class="font-semibold">Rs.345</p>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </label>
+                                <!-- label 3 -->
+                                <label class="relative md:static flex cursor-pointer border border-[#00000033] rounded py-4 px-4">
+                                    <div class="flex space-x-4">
+                                        <div>
+                                            <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-16  w-20 object-contain rounded">
+                                        </div>
+
+                                        <div class="space-y-2">
+                                            <div class="grid grid-cols-[70%,30%] text-md">
+                                                <div class="space-y-2">
+                                                    <p class="font-semibold">Mustang Aloo</p>
+                                                    <p class="text-sm text-[#6A6A6A] tracking-wide">with freshly prepared something something sauce </p>
+                                                    <div class="flex text-[#6A6A6A] items-center">
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium pr-2">678 kcal</p>
+                                                        </div>
+                                                        <div class="h-2 border-l border-gray-400"></div>
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium px-2">250 g</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div>
+                                                    <p class="font-semibold">Rs.345</p>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+
+                                </label>
+                                <!-- label 4 -->
+                                <label class="relative md:static flex cursor-pointer border border-[#00000033] rounded py-4 px-4">
+                                    <div class="flex space-x-4">
+                                        <div>
+                                            <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-16  w-20 object-contain rounded">
+                                        </div>
+
+                                        <div class="space-y-2">
+                                            <div class="grid grid-cols-[70%,30%] text-md">
+                                                <div class="space-y-2">
+                                                    <p class="font-semibold">Mustang Aloo</p>
+                                                    <p class="text-sm text-[#6A6A6A] tracking-wide">with freshly prepared something something sauce </p>
+                                                    <div class="flex text-[#6A6A6A] items-center">
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium pr-2">678 kcal</p>
+                                                        </div>
+                                                        <div class="h-2 border-l border-gray-400"></div>
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium px-2">250 g</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div>
+                                                    <p class="font-semibold">Rs.345</p>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </label>
+                                <!-- label 5 -->
+                                <label class="relative md:static flex cursor-pointer border border-[#00000033] rounded py-4 px-4">
+                                    <div class="flex space-x-4">
+                                        <div>
+                                            <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-16  w-20 object-contain rounded">
+                                        </div>
+
+                                        <div class="space-y-2">
+                                            <div class="grid grid-cols-[70%,30%] text-md">
+                                                <div class="space-y-2">
+                                                    <p class="font-semibold">Mustang Aloo</p>
+                                                    <p class="text-sm text-[#6A6A6A] tracking-wide">with freshly prepared something something sauce </p>
+                                                    <div class="flex text-[#6A6A6A] items-center">
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium pr-2">678 kcal</p>
+                                                        </div>
+                                                        <div class="h-2 border-l border-gray-400"></div>
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium px-2">250 g</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div>
+                                                    <p class="font-semibold">Rs.345</p>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </label>
+                                <!-- label 6 -->
+                                <label class="relative md:static flex cursor-pointer border border-[#00000033] rounded py-4 px-4">
+                                    <div class="flex space-x-4">
+                                        <div>
+                                            <img src="images/mustang-aalo.png" alt="mustang-aalo" class="h-16  w-20 object-contain rounded">
+                                        </div>
+
+                                        <div class="space-y-2">
+                                            <div class="grid grid-cols-[70%,30%] text-md">
+                                                <div class="space-y-2">
+                                                    <p class="font-semibold">Mustang Aloo</p>
+                                                    <p class="text-sm text-[#6A6A6A] tracking-wide">with freshly prepared something something sauce </p>
+                                                    <div class="flex text-[#6A6A6A] items-center">
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium pr-2">678 kcal</p>
+                                                        </div>
+                                                        <div class="h-2 border-l border-gray-400"></div>
+                                                        <div class="py-2">
+                                                            <p class="text-sm font-medium px-2">250 g</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div>
+                                                    <p class="font-semibold">Rs.345</p>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </label>
+                             </div>
+
                             <!-- buttons div -->
                             <div class="flex justify-between py-8">
-
-                                <!-- <div id="" class="back-button border-2 border-[#363636] rounded">
-                                    <p class="text-sm text-[#363636] font-medium px-8 md:px-8 py-3 md:py-3 cursor-pointer">Back</p>
-                                </div> -->
-                            
+                        
                                 <!-- next button -->
-                                <button class="next-button bg-[#D9253C] px-8 py-3 flex justify-center rounded cursor-pointer mt-12">
+                                <button class="hidden md:flex next-button bg-[#D9253C] px-8 py-3 flex justify-center rounded cursor-pointer mt-12">
                                     <p class="text-sm text-white font-medium">Next Step</p>
                                 </button>
+
+                                <!-- Mobile / sm only -->
+                                <div class="bg-[#FFFEF9] shadow-top fixed bottom-14 left-0 w-full z-40 md:hidden px-4 py-2">
+                                    <p id="" class="md:hidden text-sm font-medium text-[#6A6A6A] mb-2 text-center">0 items selected</p>
+                                    <div class="next-button bg-[#D9253C] px-4 py-3 flex justify-center rounded cursor-pointer">
+                                        <p class="text-sm text-white font-medium">Next Step</p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
                         <!-- STEP 3 -->
                         <div id="step3" class="step-section hidden">
-                            <p class="text-md md:text-xl font-medium">Let’s confirm your meal delivery details </p>
+                            <p class="text-[20px] md:text-xl font-semibold">Let’s confirm your meal delivery details </p>
 
                             <div class="mt-6 text-[#363636]">
                                 <div class="flex flex-col">
@@ -462,80 +675,19 @@
                             </div>
 
                             <!-- next button -->
-                            <button class="next-button bg-[#D9253C] px-4 py-3 flex justify-center rounded cursor-pointer mt-14">
+                             
+                            <button class="hidden md:flex next-button bg-[#D9253C] px-4 py-3 flex justify-center rounded cursor-pointer mt-14">
                                 <p class="text-sm text-white font-medium">Save & Add Meal to My Cart</p>
                             </button>
+
+                            <!-- Mobile / sm only -->
+                            <div class="bg-[#FFFEF9] shadow-top fixed bottom-14 left-0 w-full z-40 md:hidden px-4 py-2">
+                                <div class="next-button bg-[#D9253C] px-4 py-3 flex justify-center rounded cursor-pointer">
+                                    <p class="text-sm text-white font-medium">Save & Add Meal to My Cart</p>
+                                </div>
+                            </div>
+
                         </div>
-                        <!-- STEP 3 Preference -->
-                        <!-- <div id="step3" class="step-section hidden space-y-2">
-                            <p class="text-md md:text-xl font-medium">Do you have any special preference?</p>
-                            <p class="text-sm text-[#4F4F4F] mr-8 leading-loose pb-4">If you have any allergies or anything that you want to add or remove, please add these special requirements below.</p>
-                            <div class="">
-                                <textarea id="notes" rows="4" placeholder="Add your preferences here..."
-                                    class="w-full h-48 border border-[#8A8A8A] rounded p-3 bg-[#FFFEF9] text-md scrollbar-hide g focus:outline-none focus:ring-0 focus:ring-[#0a2458]"></textarea>
-                            </div>
-                            <div class="flex justify-between py-8">
-                                <div class="back-button border-2 border-[#363636] rounded cursor-pointer">
-                                    <p class="text-sm text-[#363636] font-medium px-8 py-3">Back</p>
-                                </div>
-
-                                <div class="next-button bg-[#D9253C] border-2 border-[#D9253C] rounded cursor-pointer">
-                                    <p class="text-sm text-white font-medium px-8 py-3">Next</p>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- STEP 4 -->
-                        <!-- <div id="step3" class="step-section hidden space-y-2">
-                            <p class="text-xl font-medium">When would you like your delivery?</p>
-                            <p class="text-sm text-[#4F4F4F] mr-8 leading-loose pb-4">If you have any allergies or anything that you want to add or remove, please add these special requirements below.</p>
-
-                            <div class="grid grid-cols-2 gap-6">
-                                <div class="flex flex-col">
-                                    <label for="time" class="text-gray-700 font-semibold mb-2 text-sm">First Delivery</label>
-                                    <input type="date" id="date" class="bg-[#FFFEF9] border-2 border-[#00000033] rounded p-3 text-sm text-[#363636]" />
-                                </div>
-                                
-                                <div class="flex flex-col">
-                                    <label for="time" class="text-gray-700 font-semibold mb-2 text-sm">Last Delivery</label>
-                                    <input type="date" id="date" class="bg-[#FFFEF9] border-2 border-[#00000033] rounded p-3 text-sm text-[#363636]" />
-                                </div>
-
-                                <div class="flex flex-col">
-                                    <label for="time" class="text-gray-700 font-semibold mb-2 text-sm">Time Slot</label>
-                                    <select id="time" class="bg-[#FFFEF9] border-2 border-[#00000033] rounded p-3 text-sm text-[#363636]">
-                                    <option disabled selected>12:13 - 14:30</option>
-                                    <option>10:00 AM - 12:00 PM</option>
-                                    <option>1:00 PM - 3:00 PM</option>
-                                    <option>4:00 PM - 6:00 PM</option>
-                                    </select>
-                                </div>
-                            </div>
-            
-                            <div class="flex justify-between py-8">
-                                <div class="back-button border-2 border-[#363636] rounded cursor-pointer">
-                                    <p class="text-sm text-[#363636] font-medium px-8 py-3">Back</p>
-                                </div>
-
-                                <div class="next-button bg-[#D9253C] border-2 border-[#D9253C] rounded cursor-pointer">
-                                    <p class="text-sm text-white font-medium px-8 py-3">Next</p>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- STEP 5 -->
-                        <!-- <div id="step5" class="step-section hidden">
-                            <div class="flex justify-between py-8">
-                                <div id=""  class="back-button border-2 border-[#363636] rounded cursor-pointer">
-                                    <p class="text-sm text-[#363636] font-medium px-8 py-3">Back</p>
-                                </div>
-
-                                <div id="" class="next-button bg-[#D9253C] border-2 border-[#D9253C] rounded cursor-pointer">
-                                    <p class="text-sm text-white font-medium px-8 py-3">Next</p>
-                                </div>
-                            </div>
-                        </div> -->
-                    
                     </div>
                 </div>
 
@@ -609,7 +761,7 @@
                 <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Menu</p>
             </div>
 
-            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meal-details.html'">
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meals.html'">
                 <img src="images/Oven.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
                 <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Meals</p>
             </div>

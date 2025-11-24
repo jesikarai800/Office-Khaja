@@ -21,10 +21,10 @@
                 <div class="flex justify-center">
                     <ul class="hidden md:flex text-[#363636] text-md tracking-wide font-semibold gap-6 ml-14">
                         <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-9">Menus</a></li>
-                        <li><a href="./my-meal-details.html" class="border-b-4 border-[#d9253c] py-9">My Meals</a></li>
+                        <li><a href="./my-meals.html" class="hover:border-b-4 border-[#d9253c] py-9">My Meals</a></li>
                         <li><a href="./create-custom-meal.html" class="hover:border-b-4 border-[#d9253c] py-9">Create Meal</a></li>
                         <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-9">My Orders</a></li>
-                        <li><a href="#" class="hover:border-b-4 border-[#d9253c] py-9">My Cart</a></li>
+                        <li><a href="./my-cart.html" class="hover:border-b-4 border-[#d9253c] py-9">My Cart</a></li>
                     </ul>
                 </div>
 
@@ -108,15 +108,16 @@
                     <p class="hidden md:flex mt-4 md:mt-4 text-sm text-[#6A6A6A] leading-relaxed">
                         "Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games. "Lore" refers to a body of traditional knowledge, stories, and beliefs on a particular subject, often passed down orally, such as "folklore". It can also refer to the detailed background information for fictional characters, worlds, or stories, especially in books, movies, and games.</p>
                     
-                        <div class="md:hidden border-b pb-3">
+                    <!-- MObile Preferences -->
+                    <div class="md:hidden border-b pb-3">
                         <div id="toggleBtn" class="flex justify-between items-center cursor-pointer select-none">
                             <p class="font-semibold text-[#4F4F4F]">Meal preference</p>
                             <img id="icon"
-                                src="images/plus.png"
+                                src="images/downward-arrow.svg"
                                 data-open-src="images/Minus.png"
-                                data-closed-src="images/plus1.png"
+                                data-closed-src="images/downward-arrow.svg"
                                 alt="toggle"
-                                class="w-5 h-5 object-contain transition-all duration-300 cursor-pointer">
+                                class="w-4 h-2 object-contain transition-all duration-300 cursor-pointer">
                         </div>
 
                         <div id="redLine" class="h-[2px] bg-red-500 w-12 transition-all duration-300">
@@ -356,7 +357,7 @@
                 <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">Menu</p>
             </div>
 
-            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meal-details.html'">
+            <div class="flex flex-col items-center icon-wrapper" onclick="window.location.href='./my-meals.html'">
                 <img src="images/Oven.svg" class="nav-icon h-[24px] w-[24px] cursor-pointer">
                 <p class="nav-name text-[10px] font-medium text-[#6A6A6A]">My Meals</p>
             </div>
@@ -378,7 +379,7 @@
         </div>
     </section>
 
-<script src="script/my-meal-details.js"></script>
+<script src="script/my-meals.js"></script>
 <script src="script/profile-dropdown.js"></script>
 
 </body>
