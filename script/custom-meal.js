@@ -84,14 +84,10 @@
 
         currentStep = step;
 
-        stepLinks.forEach(l => l.classList.remove("text-[#363636]"));
+        stepLinks.forEach(l => l.classList.remove("text-[#8A8A8A]"));
         stepLinks[step - 1].classList.add("text-[#363636]");
 
         updateProgress(step);
-
-        sections.forEach(sec => sec.classList.add("hidden")); 
-        const activeSection = document.getElementById(`step${step}`); 
-        if (activeSection) activeSection.classList.remove("hidden");
     }
 
     // Step link click

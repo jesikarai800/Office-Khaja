@@ -24,7 +24,7 @@
                 <!-- Desktop Links -->
                 <div class="flex justify-center">
                     <ul class="hidden md:flex text-[#363636] text-md tracking-wide font-semibold gap-6 ml-14">
-                        <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-9">Menus</a></li>
+                        <li><a href="./menu.html" class="hover:border-b-4 border-[#d9253c] py-9">Menu</a></li>
                         <li><a href="./my-meals.html" class="hover:border-b-4 border-[#d9253c] py-9">My Meals</a></li>
                         <li><a href="./create-custom-meal.html" class="border-b-4 border-[#d9253c] py-9">Create Meal</a></li>
                         <li><a href="./orders-listing.html" class="hover:border-b-4 border-[#d9253c] py-9">My Orders</a></li>
@@ -75,7 +75,7 @@
                     <div class="relative">
                         <h1 id="heading" class="text-2xl md:text-4xl font-semibold">Set your meal preferences</h1>
 
-                        <ul id="steps" class="hidden md:flex py-2 pt-12 flex md:flex-row text-[#8A8A8A] text-sm font-medium border-b border-[#36363633] mr-3">
+                        <ul id="steps" class="hidden md:flex py-2 pt-12 flex md:flex-row text-[#8A8A8A] text-sm font-semibold border-b border-[#36363633] mr-3">
                             <li><a href="#" class="step-link px-24 py-2 text-[#363636] cursor-pointer" data-step="1">STEP1</a></li>
                             <li><a href="#" class="step-link px-32 py-2" data-step="2">STEP2</a ></li>
                             <li><a href="#" class="step-link px-24 py-2" data-step="3">STEP3</a></li>
@@ -84,7 +84,7 @@
                         <!-- MOBILE VERSION -->
                         <ul id="mobile-steps" class="md:hidden flex justify-between justify-center gap-4 mt-6 text-sm font-semibold border-b border-[#36363633]">
                             <li><button class="mobile-step-link px-3 py-2 " data-step="1" data-label="STEP 1"></button></li>
-                            <li><button class="mobile-step-link px-3 py-2 "data-step="2" data-label="STEP 2"></button></li>
+                            <li><button class="mobile-step-link px-3 py-2 " data-step="2" data-label="STEP 2"></button></li>
                             <li><button class="mobile-step-link px-3 py-2 " data-step="3" data-label="STEP 3"></button></li>
                         </ul>
 
@@ -423,7 +423,6 @@
                                         </div>
                                     </div>
                                 </label>
-
                             </div>
                             
                             <!-- Mobile View -->
@@ -691,8 +690,6 @@
                     </div>
                 </div>
 
-                
-
                 <!-- RIGHT BOX -->
                 <div class="hidden md:block bg-[#3636360D] ml-12 rounded h-[800px]">
                     <div class="p-4">
@@ -701,44 +698,46 @@
                         <span id="selectedMeal" class="hidden border-2 border-[#00000033] bg-[#E6E6E6] px-4 py-1 rounded ml-2"></span><br>
                         <span id="selectedPeople" class="hidden border-2 border-[#00000033] bg-[#E6E6E6] px-4 py-1 rounded mt-3"></span>
 
+                        <!-- PREFERENCES (also hidden initially) -->
+                        <div id="preferences" class="hidden mt-6">
+                            <p class="text-sm font-semibold">Preferences</p>
+                            <p id="preferenceText" class="text-[#4F4F4F] text-sm leading-relaxed whitespace-pre-line space-y-4 scrollbar-hide overflow-y-auto max-h-24"></p>
+                        </div>
+
                         <!-- Added Items Section (hidden initially) -->
                         <div id="addedItemsSection" class="hidden">
                             <div class="flex justify-between items-center">
                                 <p class="text-xl font-semibold my-4">Added items</p>
-                                <p id="right-itemCount" class="text-sm font-medium text-[#6A6A6A]">4 items</p>
+                                <p id="right-itemCount" class="text-sm font-medium text-[#6A6A6A]">0 items</p>
                             </div>
-                            <div id="addedItems" class="space-y-4 scrollbar-hide overflow-y-auto max-h-96"></div>
+                            <div id="addedItems" class="space-y-4 scrollbar-hide overflow-y-auto max-h-64"></div>
                         </div> 
-
-                        <!-- PREFERENCES (also hidden initially) -->
-                        <div id="preferences" class="hidden mt-6">
-                            <p class="text-sm font-semibold">Preferences</p>
-                            <p id="preferenceText" class="text-[#4F4F4F] text-sm leading-relaxed whitespace-pre-line"></p>
-                        </div>
 
                         <!-- DELIVERY -->
                         <div id="delivery-details" class="hidden">
                             <p class="text-xl font-semibold my-4">Delivery Details</p>
                             <div class="flex justify-between">
                                 <div>
-                                    <p class="text-sm font-semibold">Subscription plan</p>
-                                    <p id="subscription-plan-right" class="text-xs mt-2"></p>
+                                    <p class="text-md font-semibold">Subscription plan</p>
+                                    <p id="subscription-plan-right" class="text-sm mt-2"></p>
                                 </div>
 
                                 <div>
-                                    <p class="text-sm font-semibold">Delivery Time</p>
-                                    <p id="delivery-time-right" class="text-xs mt-2"></p>
+                                    <p class="text-md font-semibold">Delivery Time</p>
+                                    <p id="delivery-time-right" class="text-sm mt-2"></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
 
-    <section class="hidden md:block">
-        <div class="mt-16 bg-[#2B2B2B] ">
+    <!-- Footer -->
+    <section class="hidden md:block mt-32">
+        <div class="bg-[#2B2B2B] ">
             <div class="container mx-auto py-4 px-6 md:px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                     <p class="text-sm text-white font-normal">© 2025 Office Khaja. All Rights Reserved</p>
                 <!-- Social -->

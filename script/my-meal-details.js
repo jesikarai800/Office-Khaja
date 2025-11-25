@@ -47,6 +47,10 @@ labels.forEach(label => {
 
 updateContent();
 
+
+
+
+
 //Preference
 const userPreference = "I do not want any garlic and mushroom as I am allergic to both, and avoid peanuts, soy, and onions as well.";
 
@@ -72,7 +76,7 @@ btn.addEventListener("click", () => {
     fullContent.style.maxHeight = fullContent.scrollHeight + "px";
     preview.classList.add("hidden");
 
-    icon.src = "images/Minus.png";
+    icon.src = "images/arrow.svg";
 
     redLine.classList.remove("w-12");
     redLine.classList.add("w-24");
